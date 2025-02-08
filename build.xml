@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="all" name="buildSchema" xmlns:if="ant:if" xmlns:unless="ant:unless" >
+   <description> This build process creates the schema from the ATN ODD file,
+      and will in future populate values from the taxonomies, when possible.
+   </description>
+   
+   <!--PARAMS-->
+   <dirname property="pd" file="ATN-schema.xpr"/>
+   <property name="IDENT" value="ATN"/>
+   <property name="VERBOSE" value="false"/>
+   <property name="clean" value="true"/>
+   <!-- The stylesheet location now points to the /dev/ Jenkins version of the Stylesheets. It can be modified at the command line, if necessary, to point to a different location -->
+   <property name="stylesheetLocation" value="${pd}/submodules/Stylesheets"/>
+
+   <property name="echo.separator" value="************************************************"/>   
+   <!--Schema directory-->
+   <property name="schemaDir" value="${pd}/sch"/>
+   <property name="distDir" value="${pd}/dist"/>
+   <property name="tmpDir" value="${pd}/tmp"/>
+   <!--ODD-->
+   <property name="odd" value="${schemaDir}/${IDENT}.odd"/>
+   <!--ODD expanded-->
+   <property name="odd.expanded" value="${tmpDir}/${IDENT}.expanded.odd"/>
+   <!--Processed ODD-->
+   <property name="odd.processed" value="${tmpDir}/${IDENT}.processed.odd"/>
+   <!--RNG-->
+   <property name="rng" value="${distDir}/${IDENT}.rng"/>
+   
+   
+
+   <!-- The default source, for us, is the bleeding-edge version of the TEI guidelines; we may want to modify that in future to point to the latest stable release -->
+   <property name="defaultSource" value="${stylesheetLocation}/source/p5subset.xml"/>
+   
+   <!--Expand ODD xsl-->
+   <property name="expandODD.xsl" value="${basedir}/xsl/expand_ODD.xsl"/>
+   <!--ODD 2 ODD -->
+   <property name="odd2odd.xsl" value="${stylesheetLocation}/odds/odd2odd.xsl"/>
+   <!-- ODD 2 RNG -->
+   <property name="odd2rng.xsl" value="${stylesheetLocation}/profiles/tei/rng/to.xsl"/>
+
+   
+   <target name="expandodd">
+      <echo>${echo.separator}</echo>
+      <echo>* Process ODD using ${expandODD.xsl} *</echo>
+      <echo>* Input: ${odd} *</echo>
+      <echo>* Output: ${odd.expanded} *</echo>
+      <echo>${echo.separator}</echo>
+      <exec executable="saxon">
+         <arg line="-xsl:${expandODD.xsl}"/>
+         <arg line="-s:${odd}"/>
+         <arg line="-o:${odd.expanded}"/>
+         <arg line="verbose=${VERBOSE}"/>
+         <arg line="projectDir=${pd}"/>
+         <arg line="outputDir=${tmpDir}"/>
+      </exec>
+   </target>
+   
+   
+   <target name="oddtoodd">
+      <echo>${echo.separator}</echo>
+      <echo>* Process ODD using ${odd2odd.xsl} *</echo>
+      <echo>* Input: ${odd.expanded} *</echo>
+      <echo>* Output: ${odd.processed} *</echo>
+      <echo>${echo.separator}</echo>
+      <exec executable="saxon">
+         <arg line="-s:${odd.expanded}"/>
+         <arg line="-o:${odd.processed}"/>
+         <arg line="-xsl:${odd2odd.xsl}"/>
+         <arg line="verbose=${VERBOSE}"/>
+         <arg line="defaultSource=${defaultSource}"/>
+      </exec>
+   </target>
+   
+   <target name="oddtorng">
+      <echo>${echo.separator}</echo>
+      <echo>* Create schema from ODD file using ${odd2rng.xsl} *</echo>
+      <echo>* Input: ${odd.processed} *</echo>
+      <echo>* Output: ${rng} *</echo>
+      <echo>${echo.separator}</echo>
+      <exec executable="saxon">
+         <arg line="-s:${odd.processed}"/>
+         <arg line="-o:${rng}"/>
+         <arg line="-xsl:${odd2rng.xsl}"/>
+         <arg line="verbose=${VERBOSE}"/>
+      </exec>
+   </target>
+   
+   <target name="cleanup" if:true="${clean}">
+      <echo>${echo.separator}</echo>
+      <echo>* Cleaning up temporary files *</echo>
+      <echo>${echo.separator}</echo>
+      <delete dir="${tmpDir}"/>
+   </target>
+   
+   <target name="all" depends="expandodd, oddtoodd, oddtorng, cleanup"/>
+   
+</project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Guidelines and Schema for the Adaptive Text Network</title>
+        <author>The Adaptive Text Network</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Digital Scholarship in the Arts, University of British Columbia</publisher>
+        <publisher>Digital Humanities Innovation Lab, Simon Fraser University</publisher>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <tagsDecl xml:id="ATN_renditions"
+        source="https://github.com/TEIC/TEI/blob/dev/P5/Exemplars/tei_simplePrint.odd">
+        <rendition xml:id="allcaps">text-transform: uppercase;</rendition>
+        <rendition xml:id="blackletter">font-family: fantasy;</rendition>
+        <rendition xml:id="bold">font-weight: bold;</rendition>
+        <rendition xml:id="bottombraced">padding-bottom: 2pt; border-bottom: dashed gray
+          2pt;</rendition>
+        <rendition xml:id="block">display:block;</rendition>
+        <rendition xml:id="boxed">padding: 2pt; border: solid black 1pt;</rendition>
+        <rendition xml:id="centre">text-align: center;</rendition>
+        <rendition xml:id="cursive">font-family: cursive;</rendition>
+        <rendition xml:id="doublestrikethrough">text-decoration: line-through; color:
+          red;</rendition>
+        <rendition xml:id="doubleunderline">text-decoration: underline; color: red;</rendition>
+        <rendition xml:id="dropcap">font-size : 6em; font-family: cursive; font-weight : bold;
+          vertical-align: top; height: 1em; line-height: 1em; float : left; width : 1em; color :
+          #c00; margin: 0em; padding: 0px;</rendition>
+        <rendition xml:id="float">float:right; display: block; font-size: smaller; clear: right;
+          padding: 4pt; width: 15%; </rendition>
+        <rendition xml:id="hyphen"/>
+        <rendition xml:id="inline">display:inline;</rendition>
+        <rendition xml:id="italic">font-style: italic;</rendition>
+        <rendition xml:id="justify">text-align: justify;</rendition>
+        <rendition xml:id="larger">font-size: larger;</rendition>
+        <rendition xml:id="left">text-align: left;</rendition>
+        <rendition xml:id="leftbraced">padding-left: 2pt; border-left: dotted gray 2pt; </rendition>
+        <rendition xml:id="letterspace">letter-spacing: 0.5em;</rendition>
+        <rendition xml:id="literal">font-family:monospace; white-space:pre;</rendition>
+        <rendition xml:id="normalstyle">font-style:roman;</rendition>
+        <rendition xml:id="normalweight">font-weight:normal;</rendition>
+        <rendition xml:id="right">text-align: right;</rendition>
+        <rendition xml:id="rightbraced">padding-right: 2pt; border-right: dotted gray 2pt; </rendition>
+        <rendition xml:id="rotateleft">-webkit-transform: rotate(90deg); transform:
+          rotate(90deg);</rendition>
+        <rendition xml:id="rotateright">-webkit-transform: rotate(-90deg); transform:
+          rotate(-90deg);</rendition>
+        <rendition xml:id="rules">border: 1px solid black; padding:
+          2px;border-collapse:collapse;border-spacing:0;</rendition>
+        <rendition xml:id="smallcaps">font-variant: small-caps;</rendition>
+        <rendition xml:id="smaller">font-size: smaller;</rendition>
+        <rendition xml:id="strikethrough">text-decoration: line-through;</rendition>
+        <rendition xml:id="subscript">vertical-align: bottom; font-size: smaller;</rendition>
+        <rendition xml:id="superscript">vertical-align: super; font-size: smaller;</rendition>
+        <rendition xml:id="topbraced">padding-top: 2pt; border-top: dotted gray 2pt; </rendition>
+        <rendition xml:id="typewriter">font-family:monospace;</rendition>
+        <rendition xml:id="underline">text-decoration: underline;</rendition>
+        <rendition xml:id="wavyunderline">text-decoration: underline; text-decoration-style:
+          wavy;</rendition>
+      </tagsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <head>The Adaptive Text Network Schema and Guidelines</head>
+      <div>
+        <head>Introduction</head>
+        <p>This is the work-in-progress schema and guidelines for the Adaptive Text Network project at the University of British Columbia, in partnership with Digital Scholarship in the Arts (UBC) and the Digital Humanities Innovation Lab (SFU).</p>
+        <p>At the moment, this is a very permissive schema, but will be adjusted as necessary.</p>
+      </div>
+    </body>
+    <back>
+      <schemaSpec ident="ATN" start="TEI" source="tei:4.9.0">
+        <moduleRef key="analysis" include="interp interpGrp span spanGrp w"/>
+        <moduleRef key="core"/>
+        <moduleRef key="drama"/>
+        <moduleRef key="figures"/>
+        <moduleRef key="header"/>
+        <moduleRef key="gaiji"/>
+        <moduleRef key="linking" include="standOff"/>
+        <moduleRef key="namesdates"/>
+        <moduleRef key="tei"/>
+        <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7"/>
+        <moduleRef key="transcr"/>
+        <moduleRef key="verse"/>
+        <classSpec  ident="att.global.rendition" mode="change" module="core" type="atts">
+          <attList>
+            <attDef ident="rendition" mode="change">
+              <constraintSpec ident="rendition.onlyInText" scheme="schematron">
+                <constraint>
+                  <sch:rule context="tei:*[@rendition]">
+                    <sch:assert test="ancestor::tei:text">ERROR: @rendition not allowed here.
+                      @rendition should only be supplied on elements in primary source text
+                      contexts (i.e. within the text element).</sch:assert>
+                  </sch:rule>
+                </constraint>
+              </constraintSpec>
+              <valList mode="change" type="semi" source="#ATN_renditions"/>
+            </attDef>
+          </attList>
+        </classSpec>
+      </schemaSpec>
+    </back>
+  </text>
+</TEI>
