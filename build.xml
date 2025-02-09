@@ -8,7 +8,7 @@
    <dirname property="pd" file="ATN-schema.xpr"/>
    <property name="IDENT" value="ATN"/>
    <property name="VERBOSE" value="false"/>
-   <property name="clean" value="true"/>
+   
    <!-- The stylesheet location now points to the /dev/ Jenkins version of the Stylesheets. It can be modified at the command line, if necessary, to point to a different location -->
    <property name="stylesheetLocation" value="${pd}/submodules/Stylesheets"/>
 
@@ -45,7 +45,7 @@
       <echo>* Input: ${odd} *</echo>
       <echo>* Output: ${odd.expanded} *</echo>
       <echo>${echo.separator}</echo>
-      <exec executable="saxon">
+      <exec executable="saxon" failonerror="true">
          <arg line="-xsl:${expandODD.xsl}"/>
          <arg line="-s:${odd}"/>
          <arg line="-o:${odd.expanded}"/>
@@ -62,7 +62,7 @@
       <echo>* Input: ${odd.expanded} *</echo>
       <echo>* Output: ${odd.processed} *</echo>
       <echo>${echo.separator}</echo>
-      <exec executable="saxon">
+      <exec executable="saxon" failonerror="true">
          <arg line="-s:${odd.expanded}"/>
          <arg line="-o:${odd.processed}"/>
          <arg line="-xsl:${odd2odd.xsl}"/>
@@ -77,7 +77,7 @@
       <echo>* Input: ${odd.processed} *</echo>
       <echo>* Output: ${rng} *</echo>
       <echo>${echo.separator}</echo>
-      <exec executable="saxon">
+      <exec executable="saxon" failonerror="true">
          <arg line="-s:${odd.processed}"/>
          <arg line="-o:${rng}"/>
          <arg line="-xsl:${odd2rng.xsl}"/>
@@ -85,11 +85,13 @@
       </exec>
    </target>
    
-   <target name="cleanup" if:true="${clean}">
+   <target name="cleanup">
       <echo>${echo.separator}</echo>
-      <echo>* Cleaning up temporary files *</echo>
+      <echo unless:true="${VERBOSE}">* Cleaning up temporary files *</echo>
+      <echo if:true="${VERBOSE}">* Skipping clean up *</echo>
       <echo>${echo.separator}</echo>
-      <delete dir="${tmpDir}"/>
+      <delete unless:true="${VERBOSE}" dir="${tmpDir}"/>
+      
    </target>
    
    <target name="all" depends="expandodd, oddtoodd, oddtorng, cleanup"/>

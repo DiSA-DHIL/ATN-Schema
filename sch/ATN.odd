@@ -19,7 +19,7 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
-      <tagsDecl xml:id="ATN_renditions"
+      <tagsDecl xml:id="ATN_renditions" n="rnd"
         source="https://github.com/TEIC/TEI/blob/dev/P5/Exemplars/tei_simplePrint.odd">
         <rendition xml:id="allcaps">text-transform: uppercase;</rendition>
         <rendition xml:id="blackletter">font-family: fantasy;</rendition>
@@ -80,9 +80,16 @@
       </div>
     </body>
     <back>
-      <schemaSpec ident="ATN" start="TEI" source="tei:4.9.0">
+      <schemaSpec ident="ATN" start="TEI">
         <moduleRef key="analysis" include="interp interpGrp span spanGrp w"/>
         <moduleRef key="core"/>
+        <elementSpec ident="resp" mode="change">
+          <attList>
+            <attDef ident="ref" mode="change">
+              <valList mode="add" type="semi" source="LOC_relators.xml#loc CRediT.xml#credit"/>
+            </attDef>
+          </attList>
+        </elementSpec>
         <moduleRef key="drama"/>
         <moduleRef key="figures"/>
         <moduleRef key="header"/>
@@ -93,6 +100,19 @@
         <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7"/>
         <moduleRef key="transcr"/>
         <moduleRef key="verse"/>
+        <elementSpec ident="TEI" mode="change">
+          <constraintSpec mode="add" ident="TEI.rootId" scheme="schematron">
+            <constraint>
+              <sch:rule context="tei:TEI">
+                <sch:let name="basename" value="tokenize(document-uri(/),'[/\.]')[last() - 1]"/>
+                <sch:assert test="@xml:id">ERROR: All TEI elements must have an @xml:id</sch:assert>
+                <sch:assert test="@xml:id = $basename">ERROR: The root @xml:id should be the
+                same as the file name (<sch:value-of select="$basename"/>)</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+        
         <classSpec  ident="att.global.rendition" mode="change" module="core" type="atts">
           <attList>
             <attDef ident="rendition" mode="change">

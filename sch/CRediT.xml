@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>CRediT Taxonomy</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Taken from </p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:id="credit" n="credit">
+               <!--Taken from https://jats4r.niso.org/credit-taxonomy/-->
+               <bibl>CRediT Taxonomy</bibl>
+               <category xml:id="credit_conceptualization"
+                  copyOf="https://credit.niso.org/contributor-roles/conceptualization/">
+                  <catDesc>
+                     <term>Conceptualization</term>
+                     <gloss>Ideas; formulation or evolution of overarching research goals and
+                        aims.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_data-curation"
+                  copyOf="https://credit.niso.org/contributor-roles/data-curation/">
+                  <catDesc>
+                     <term>Data curation</term>
+                     <gloss>Management activities to annotate (produce metadata), scrub data and
+                        maintain research data (including software code, where it is necessary for
+                        interpreting the data itself) for initial use and later re-use.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_formal-analysis"
+                  copyOf="https://credit.niso.org/contributor-roles/formal-analysis/">
+                  <catDesc>
+                     <term>Formal analysis</term>
+                     <gloss>Application of statistical, mathematical, computational, or other formal
+                        techniques to analyse or synthesize study data.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_funding-acquisition"
+                  copyOf="https://credit.niso.org/contributor-roles/funding-acquisition/">
+                  <catDesc>
+                     <term>Funding acquisition</term>
+                     <gloss>Acquisition of the financial support for the project leading to this
+                        publication.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_investigation"
+                  copyOf="https://credit.niso.org/contributor-roles/investigation/">
+                  <catDesc>
+                     <term>Investigation</term>
+                     <gloss>Conducting a research and investigation process, specifically performing
+                        the experiments, or data/evidence collection.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_methodology"
+                  copyOf="https://credit.niso.org/contributor-roles/methodology/">
+                  <catDesc>
+                     <term>Methodology</term>
+                     <gloss>Development or design of methodology; creation of models.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_project-administration"
+                  copyOf="https://credit.niso.org/contributor-roles/project-administration/">
+                  <catDesc>
+                     <term>Project administration</term>
+                     <gloss>Management and coordination responsibility for the research activity
+                        planning and execution.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_resources"
+                  copyOf="https://credit.niso.org/contributor-roles/resources/">
+                  <catDesc>
+                     <term>Resources</term>
+                     <gloss>Provision of study materials, reagents, materials, patients, laboratory
+                        samples, animals, instrumentation, computing resources, or other analysis
+                        tools.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_software"
+                  copyOf="https://credit.niso.org/contributor-roles/software/">
+                  <catDesc>
+                     <term>Software</term>
+                     <gloss>Programming, software development; designing computer programs;
+                        implementation of the computer code and supporting algorithms; testing of
+                        existing code components.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_supervision"
+                  copyOf="https://credit.niso.org/contributor-roles/supervision/">
+                  <catDesc>
+                     <term>Supervision</term>
+                     <gloss>Oversight and leadership responsibility for the research activity
+                        planning and execution, including mentorship external to the core
+                        team.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_validation"
+                  copyOf="https://credit.niso.org/contributor-roles/validation/">
+                  <catDesc>
+                     <term>Validation</term>
+                     <gloss>Verification, whether as a part of the activity or separate, of the
+                        overall replication/reproducibility of results/experiments and other
+                        research outputs.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_visualization"
+                  copyOf="https://credit.niso.org/contributor-roles/visualization/">
+                  <catDesc>
+                     <term>Visualization</term>
+                     <gloss>Preparation, creation and/or presentation of the published work,
+                        specifically visualization/data presentation.</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_writing-original-draft"
+                  copyOf="https://credit.niso.org/contributor-roles/writing-original-draft/">
+                  <catDesc>
+                     <term>Writing – original draft</term>
+                     <gloss>Preparation, creation and/or presentation of the published work,
+                        specifically writing the initial draft (including substantive
+                        translation).</gloss>
+                  </catDesc>
+               </category>
+               <category xml:id="credit_writing-review-editing"
+                  copyOf="https://credit.niso.org/contributor-roles/writing-review-editing/">
+                  <catDesc>
+                     <term>Writing – review &amp; editing</term>
+                     <gloss>Preparation, creation and/or presentation of the published work by those
+                        from the original research group, specifically critical review, commentary
+                        or revision – including pre- or post-publication stages.</gloss>
+                  </catDesc>
+               </category>
+               
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p/>
+      </body>
+   </text>
+</TEI>

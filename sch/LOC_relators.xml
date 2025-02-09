@@ -1,0 +1,2594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Library of Congress Responsibility Taxonomy</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>From the LOC</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:id="loc" n="loc">
+               <bibl>Library of Congress MARC Relators</bibl>
+               <category xml:id="loc_abr">
+                  <catDesc>
+                     <term>Abridger</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        shortening or condensing the original work but leaving the nature and
+                        content of the original work substantially unchanged</gloss>
+                  </catDesc>
+                  <!-- <equiv name="abr" uri="http://id.loc.gov/vocabulary/relators/abr"/> -->
+               </category>
+               <category xml:id="loc_acp">
+                  <catDesc>
+                     <term>Art Copyist</term>
+                     <gloss>A person (e.g., a painter or sculptor) who makes copies of works of
+                        visual art.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="acp" uri="http://id.loc.gov/vocabulary/relators/acp"/> -->
+               </category>
+               <category xml:id="loc_act">
+                  <catDesc>
+                     <term>Actor</term>
+                     <gloss>A performer contributing to an expression of a work by acting as a cast
+                        member or player in a musical or dramatic presentation, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="act" uri="http://id.loc.gov/vocabulary/relators/act"/> -->
+               </category>
+               <category xml:id="loc_adi">
+                  <catDesc>
+                     <term>Art Director</term>
+                     <gloss>A person contributing to a motion picture or television production by
+                        overseeing the artists and craftspeople who build the sets.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="adi" uri="http://id.loc.gov/vocabulary/relators/adi"/> -->
+               </category>
+               <category xml:id="loc_adp">
+                  <catDesc>
+                     <term>Adapter</term>
+                     <gloss>A person or organization who 1) reworks a musical composition, usually
+                        for a different medium, or 2) rewrites novels or stories for motion pictures
+                        or other audiovisual medium.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="adp" uri="http://id.loc.gov/vocabulary/relators/adp"/> -->
+               </category>
+               <category xml:id="loc_aft">
+                  <catDesc>
+                     <term>Author of Afterword, Colophon, Etc.</term>
+                     <gloss>A person or organization responsible for an afterword, postface,
+                        colophon, etc. but who is not the chief author of a work</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aft" uri="http://id.loc.gov/vocabulary/relators/aft"/> -->
+               </category>
+               <category xml:id="loc_anc">
+                  <catDesc>
+                     <term>Announcer</term>
+                     <gloss>A person who makes announcements on television or radio to identify
+                        stations, introduce and close shows, announce station breaks, commercials,
+                        and public service information. May also read news flashes and describe
+                        other public and sporting events.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="anc" uri="http://id.loc.gov/vocabulary/relators/anc"/> -->
+               </category>
+               <category xml:id="loc_anl">
+                  <catDesc>
+                     <term>Analyst</term>
+                     <gloss>A person or organization that reviews, examines and interprets data or
+                        information in a specific area.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="anl" uri="http://id.loc.gov/vocabulary/relators/anl"/> -->
+               </category>
+               <category xml:id="loc_anm">
+                  <catDesc>
+                     <term>Animator</term>
+                     <gloss>A person contributing to a moving image work or computer program by
+                        giving apparent movement to inanimate objects or drawings. For the creator
+                        of the drawings that are animated, see artist.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="anm" uri="http://id.loc.gov/vocabulary/relators/anm"/> -->
+               </category>
+               <category xml:id="loc_ann">
+                  <catDesc>
+                     <term>Annotator</term>
+                     <gloss>A person who makes manuscript annotations on an item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ann" uri="http://id.loc.gov/vocabulary/relators/ann"/> -->
+               </category>
+               <category xml:id="loc_ant">
+                  <catDesc>
+                     <term>Bibliographic Antecedent</term>
+                     <gloss>A person or organization responsible for a resource upon which the
+                        resource represented by the bibliographic description is based. This may be
+                        appropriate for adaptations, sequels, continuations, indexes, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ant" uri="http://id.loc.gov/vocabulary/relators/ant"/> -->
+               </category>
+               <category xml:id="loc_ape">
+                  <catDesc>
+                     <term>Appellee</term>
+                     <gloss>A person or organization against whom an appeal is taken.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ape" uri="http://id.loc.gov/vocabulary/relators/ape"/> -->
+               </category>
+               <category xml:id="loc_apl">
+                  <catDesc>
+                     <term>Appellant</term>
+                     <gloss>A person or organization who appeals a lower court's decision.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="apl" uri="http://id.loc.gov/vocabulary/relators/apl"/> -->
+               </category>
+               <category xml:id="loc_app">
+                  <catDesc>
+                     <term>Applicant</term>
+                     <gloss>A person or organization responsible for the submission of an
+                        application or who is named as eligible for the results of the processing of
+                        the application (e.g., bestowing of rights, reward, title, position)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="app" uri="http://id.loc.gov/vocabulary/relators/app"/> -->
+               </category>
+               <category xml:id="loc_aqt">
+                  <catDesc>
+                     <term>Author in Quotations or Text Abstracts</term>
+                     <gloss>A person or organization whose work is largely quoted or extracted in
+                        works to which he or she did not contribute directly. Such quotations are
+                        found particularly in exhibition catalogs, collections of photographs,
+                        etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aqt" uri="http://id.loc.gov/vocabulary/relators/aqt"/> -->
+               </category>
+               <category xml:id="loc_arc">
+                  <catDesc>
+                     <term>Architect</term>
+                     <gloss>A person, family, or organization responsible for creating an
+                        architectural design, including a pictorial representation intended to show
+                        how a building, etc., will look when completed. It also oversees the
+                        construction of structures.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="arc" uri="http://id.loc.gov/vocabulary/relators/arc"/> -->
+               </category>
+               <category xml:id="loc_ard">
+                  <catDesc>
+                     <term>Artistic Director</term>
+                     <gloss>A person responsible for controlling the development of the artistic
+                        style of an entire production, including the choice of works to be presented
+                        and selection of senior production staff.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ard" uri="http://id.loc.gov/vocabulary/relators/ard"/> -->
+               </category>
+               <category xml:id="loc_arr">
+                  <catDesc>
+                     <term>Arranger</term>
+                     <gloss>A person, family, or organization contributing to a musical work by
+                        rewriting the composition for a medium of performance different from that
+                        for which the work was originally intended, or modifying the work for the
+                        same medium of performance, etc., such that the musical substance of the
+                        original composition remains essentially unchanged. For extensive
+                        modification that effectively results in the creation of a new musical work,
+                        see composer.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="arr" uri="http://id.loc.gov/vocabulary/relators/arr"/> -->
+               </category>
+               <category xml:id="loc_art">
+                  <catDesc>
+                     <term>Artist</term>
+                     <gloss>A person, family, or organization responsible for creating a work by
+                        conceiving, and implementing, an original graphic design, drawing, painting,
+                        etc. For book illustrators, prefer Illustrator.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="art" uri="http://id.loc.gov/vocabulary/relators/art"/> -->
+               </category>
+               <category xml:id="loc_asg">
+                  <catDesc>
+                     <term>Assignee</term>
+                     <gloss>A person or organization to whom a license for printing or publishing
+                        has been transferred.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="asg" uri="http://id.loc.gov/vocabulary/relators/asg"/> -->
+               </category>
+               <category xml:id="loc_asn">
+                  <catDesc>
+                     <term>Associated Name</term>
+                     <gloss>A person or organization associated with or found in an item or
+                        collection, which cannot be determined to be that of a Former owner [fmo] or
+                        other designated relationship indicative of provenance.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="asn" uri="http://id.loc.gov/vocabulary/relators/asn"/> -->
+               </category>
+               <category xml:id="loc_ato">
+                  <catDesc>
+                     <term>Autographer</term>
+                     <gloss>A person whose manuscript signature appears on an item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ato" uri="http://id.loc.gov/vocabulary/relators/ato"/> -->
+               </category>
+               <category xml:id="loc_att">
+                  <catDesc>
+                     <term>Attributed Name</term>
+                     <gloss>An author, artist, etc., relating him/her to a resource for which there
+                        is or once was substantial authority for designating that person as author,
+                        creator, etc. of the work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="att" uri="http://id.loc.gov/vocabulary/relators/att"/> -->
+               </category>
+               <category xml:id="loc_auc">
+                  <catDesc>
+                     <term>Auctioneer</term>
+                     <gloss>A person or organization in charge of the estimation and public
+                        auctioning of goods, particularly books, artistic works, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="auc" uri="http://id.loc.gov/vocabulary/relators/auc"/> -->
+               </category>
+               <category xml:id="loc_aud">
+                  <catDesc>
+                     <term>Author of Dialog</term>
+                     <gloss>A person or organization responsible for the dialog or spoken commentary
+                        for a screenplay or sound recording.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aud" uri="http://id.loc.gov/vocabulary/relators/aud"/> -->
+               </category>
+               <category xml:id="loc_aue">
+                  <catDesc>
+                     <term>Audio Engineer</term>
+                     <gloss>A person or organization contributing to a resource by managing the
+                        technical aspects of sound during the processes of recording, mixing, and
+                        reproduction.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aue" uri="http://id.loc.gov/vocabulary/relators/aue"/> -->
+               </category>
+               <category xml:id="loc_aui">
+                  <catDesc>
+                     <term>Author of Introduction, Etc.</term>
+                     <gloss>A person or organization responsible for an introduction, preface,
+                        foreword, or other critical introductory matter, but who is not the chief
+                        author.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aui" uri="http://id.loc.gov/vocabulary/relators/aui"/> -->
+               </category>
+               <category xml:id="loc_aup">
+                  <catDesc>
+                     <term>Audio Producer</term>
+                     <gloss>A producer responsible for most of the business aspects of an audio
+                        recording.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aup" uri="http://id.loc.gov/vocabulary/relators/aup"/> -->
+               </category>
+               <category xml:id="loc_aus">
+                  <catDesc>
+                     <term>Screenwriter</term>
+                     <gloss>An author of a screenplay, script, or scene.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aus" uri="http://id.loc.gov/vocabulary/relators/aus"/> -->
+               </category>
+               <category xml:id="loc_aut">
+                  <catDesc>
+                     <term>Author</term>
+                     <gloss>A person, family, or organization responsible for creating a work that
+                        is primarily textual in content, regardless of media type (e.g., printed
+                        text, spoken word, electronic text, tactile text) or genre (e.g., poems,
+                        novels, screenplays, blogs). Use also for persons, etc., creating a new work
+                        by paraphrasing, rewriting, or adapting works by another creator such that
+                        the modification has substantially changed the nature and content of the
+                        original or changed the medium of expression.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="aut" uri="http://id.loc.gov/vocabulary/relators/aut"/> -->
+               </category>
+               <category xml:id="loc_bdd">
+                  <catDesc>
+                     <term>Binding Designer</term>
+                     <gloss>A person or organization responsible for the binding design of a book,
+                        including the type of binding, the type of materials used, and any
+                        decorative aspects of the binding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bdd" uri="http://id.loc.gov/vocabulary/relators/bdd"/> -->
+               </category>
+               <category xml:id="loc_bjd">
+                  <catDesc>
+                     <term>Bookjacket Designer</term>
+                     <gloss>A person or organization responsible for the design of flexible covers
+                        designed for or published with a book, including the type of materials used,
+                        and any decorative aspects of the book jacket.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bjd" uri="http://id.loc.gov/vocabulary/relators/bjd"/> -->
+               </category>
+               <category xml:id="loc_bka">
+                  <catDesc>
+                     <term>Book Artist</term>
+                     <gloss>A person who is responsible for exploiting the book form or altering its
+                        physical structure.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bka" uri="http://id.loc.gov/vocabulary/relators/bka"/> -->
+               </category>
+               <category xml:id="loc_bkd">
+                  <catDesc>
+                     <term>Book Designer</term>
+                     <gloss>A person or organization involved in manufacturing a manifestation by
+                        being responsible for the entire graphic design of a book, including
+                        arrangement of type and illustration, choice of materials, and process
+                        used.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bkd" uri="http://id.loc.gov/vocabulary/relators/bkd"/> -->
+               </category>
+               <category xml:id="loc_bkp">
+                  <catDesc>
+                     <term>Book Producer</term>
+                     <gloss>A person or organization responsible for the production of books and
+                        other print media.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bkp" uri="http://id.loc.gov/vocabulary/relators/bkp"/> -->
+               </category>
+               <category xml:id="loc_blw">
+                  <catDesc>
+                     <term>Blurb Writer</term>
+                     <gloss>A person or organization responsible for writing a commendation or
+                        testimonial for a work, which appears on or within the publication itself,
+                        frequently on the back or dust jacket of print publications or on
+                        advertising material for all media.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="blw" uri="http://id.loc.gov/vocabulary/relators/blw"/> -->
+               </category>
+               <category xml:id="loc_bnd">
+                  <catDesc>
+                     <term>Binder</term>
+                     <gloss>A person who binds an item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bnd" uri="http://id.loc.gov/vocabulary/relators/bnd"/> -->
+               </category>
+               <category xml:id="loc_bpd">
+                  <catDesc>
+                     <term>Bookplate Designer</term>
+                     <gloss>A person or organization responsible for the design of a book owner's
+                        identification label that is most commonly pasted to the inside front cover
+                        of a book.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bpd" uri="http://id.loc.gov/vocabulary/relators/bpd"/> -->
+               </category>
+               <category xml:id="loc_brd">
+                  <catDesc>
+                     <term>Broadcaster</term>
+                     <gloss>A person, family, or organization involved in broadcasting a resource to
+                        an audience via radio, television, webcast, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="brd" uri="http://id.loc.gov/vocabulary/relators/brd"/> -->
+               </category>
+               <category xml:id="loc_brl">
+                  <catDesc>
+                     <term>Braille Embosser</term>
+                     <gloss>A person, family, or organization involved in manufacturing a resource
+                        by embossing Braille cells using a stylus, special embossing printer, or
+                        other device.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="brl" uri="http://id.loc.gov/vocabulary/relators/brl"/> -->
+               </category>
+               <category xml:id="loc_bsl">
+                  <catDesc>
+                     <term>Bookseller</term>
+                     <gloss>A person or organization who makes books and other bibliographic
+                        materials available for purchase. Interest in the materials is primarily
+                        lucrative.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="bsl" uri="http://id.loc.gov/vocabulary/relators/bsl"/> -->
+               </category>
+               <category xml:id="loc_cad">
+                  <catDesc>
+                     <term>Casting Director</term>
+                     <gloss>A person responsible for most aspects of assigning roles and duties to
+                        performers.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cad" uri="http://id.loc.gov/vocabulary/relators/cad"/> -->
+               </category>
+               <category xml:id="loc_cas">
+                  <catDesc>
+                     <term>Caster</term>
+                     <gloss>A person, family, or organization involved in manufacturing a resource
+                        by pouring a liquid or molten substance into a mold and leaving it to
+                        solidify to take the shape of the mold.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cas" uri="http://id.loc.gov/vocabulary/relators/cas"/> -->
+               </category>
+               <category xml:id="loc_ccp">
+                  <catDesc>
+                     <term>Conceptor</term>
+                     <gloss>A person or organization responsible for the original idea on which a
+                        work is based, this includes the scientific author of an audio-visual item
+                        and the conceptor of an advertisement.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ccp" uri="http://id.loc.gov/vocabulary/relators/ccp"/> -->
+               </category>
+               <category xml:id="loc_chr">
+                  <catDesc>
+                     <term>Choreographer</term>
+                     <gloss>A person responsible for creating or contributing to a work of
+                        movement.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="chr" uri="http://id.loc.gov/vocabulary/relators/chr"/> -->
+               </category>
+               <category xml:id="loc_cli">
+                  <catDesc>
+                     <term>Client</term>
+                     <gloss>A person or organization for whom another person or organization is
+                        acting.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cli" uri="http://id.loc.gov/vocabulary/relators/cli"/> -->
+               </category>
+               <category xml:id="loc_cll">
+                  <catDesc>
+                     <term>Calligrapher</term>
+                     <gloss>A person or organization who writes in an artistic hand as a copyist,
+                        engrosser, or contributor to a comic book, graphic novel, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cll" uri="http://id.loc.gov/vocabulary/relators/cll"/> -->
+               </category>
+               <category xml:id="loc_clr">
+                  <catDesc>
+                     <term>Colorist</term>
+                     <gloss>A person or organization responsible for applying color to drawings,
+                        prints, photographs, maps, moving images, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="clr" uri="http://id.loc.gov/vocabulary/relators/clr"/> -->
+               </category>
+               <category xml:id="loc_clt">
+                  <catDesc>
+                     <term>Collotyper</term>
+                     <gloss>A person, family, or organization involved in manufacturing a
+                        manifestation of photographic prints from film or other colloid that has
+                        ink-receptive and ink-repellent surfaces.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="clt" uri="http://id.loc.gov/vocabulary/relators/clt"/> -->
+               </category>
+               <category xml:id="loc_cmm">
+                  <catDesc>
+                     <term>Commentator</term>
+                     <gloss>A performer contributing to a work by providing interpretation,
+                        analysis, or a discussion of the subject matter on a recording, film, or
+                        other audiovisual medium.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cmm" uri="http://id.loc.gov/vocabulary/relators/cmm"/> -->
+               </category>
+               <category xml:id="loc_cmp">
+                  <catDesc>
+                     <term>Composer</term>
+                     <gloss>A person, family, or organization responsible for creating or
+                        contributing to a musical resource by adding music to a work that originally
+                        lacked it or supplements it.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cmp" uri="http://id.loc.gov/vocabulary/relators/cmp"/> -->
+               </category>
+               <category xml:id="loc_cmt">
+                  <catDesc>
+                     <term>Compositor</term>
+                     <gloss>A person or organization responsible for the creation of metal slug, or
+                        molds made of other materials, used to produce the text and images in
+                        printed matter.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cmt" uri="http://id.loc.gov/vocabulary/relators/cmt"/> -->
+               </category>
+               <category xml:id="loc_cnd">
+                  <catDesc>
+                     <term>Conductor</term>
+                     <gloss>A performer contributing to a musical resource by leading a performing
+                        group (orchestra, chorus, opera, etc.) in a musical or dramatic
+                        presentation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cnd" uri="http://id.loc.gov/vocabulary/relators/cnd"/> -->
+               </category>
+               <category xml:id="loc_cng">
+                  <catDesc>
+                     <term>Cinematographer</term>
+                     <gloss>A person in charge of photographing a motion picture, who plans the
+                        technical aspects of lighting and photographing of scenes, and often assists
+                        the director in the choice of angles, camera setups, and lighting moods. He
+                        or she may also supervise the further processing of filmed material up to
+                        the completion of the work print. Cinematographer is also referred to as
+                        director of photography.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cng" uri="http://id.loc.gov/vocabulary/relators/cng"/> -->
+               </category>
+               <category xml:id="loc_cns">
+                  <catDesc>
+                     <term>Censor</term>
+                     <gloss>A person or organization who examines bibliographic resources for the
+                        purpose of suppressing parts deemed objectionable on moral, political,
+                        military, or other grounds.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cns" uri="http://id.loc.gov/vocabulary/relators/cns"/> -->
+               </category>
+               <category xml:id="loc_coe">
+                  <catDesc>
+                     <term>Contestant-appellee</term>
+                     <gloss>A contestant against whom an appeal is taken from one court of law or
+                        jurisdiction to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="coe" uri="http://id.loc.gov/vocabulary/relators/coe"/> -->
+               </category>
+               <category xml:id="loc_col">
+                  <catDesc>
+                     <term>Collector</term>
+                     <gloss>A curator who brings together items from various sources that are then
+                        arranged, described, and cataloged as a collection. A collector is neither
+                        the creator of the material nor a person to whom manuscripts in the
+                        collection may have been addressed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="col" uri="http://id.loc.gov/vocabulary/relators/col"/> -->
+               </category>
+               <category xml:id="loc_com">
+                  <catDesc>
+                     <term>Compiler</term>
+                     <gloss>A person, family, or organization responsible for creating a new work
+                        (e.g., a bibliography, a directory) through the act of compilation, e.g.,
+                        selecting, arranging, aggregating, and editing data, information,
+                        etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="com" uri="http://id.loc.gov/vocabulary/relators/com"/> -->
+               </category>
+               <category xml:id="loc_con">
+                  <catDesc>
+                     <term>Conservator</term>
+                     <gloss>A person or organization responsible for documenting, preserving, or
+                        treating printed or manuscript material, works of art, artifacts, or other
+                        media.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="con" uri="http://id.loc.gov/vocabulary/relators/con"/> -->
+               </category>
+               <category xml:id="loc_cop">
+                  <catDesc>
+                     <term>Camera Operator</term>
+                     <gloss>A person who operates a motion picture camera to film a moving image
+                        resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cop" uri="http://id.loc.gov/vocabulary/relators/cop"/> -->
+               </category>
+               <category xml:id="loc_cor">
+                  <catDesc>
+                     <term>Collection Registrar</term>
+                     <gloss>A curator who lists or inventories the items in an aggregate work such
+                        as a collection of items or works.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cor" uri="http://id.loc.gov/vocabulary/relators/cor"/> -->
+               </category>
+               <category xml:id="loc_cos">
+                  <catDesc>
+                     <term>Contestant</term>
+                     <gloss>A person(s) or organization who opposes, resists, or disputes, in a
+                        court of law, a claim, decision, result, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cos" uri="http://id.loc.gov/vocabulary/relators/cos"/> -->
+               </category>
+               <category xml:id="loc_cot">
+                  <catDesc>
+                     <term>Contestant-appellant</term>
+                     <gloss>A contestant who takes an appeal from one court of law or jurisdiction
+                        to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cot" uri="http://id.loc.gov/vocabulary/relators/cot"/> -->
+               </category>
+               <category xml:id="loc_cou">
+                  <catDesc>
+                     <term>Court Governed</term>
+                     <gloss>A court governed by court rules, regardless of their official nature
+                        (e.g., laws, administrative regulations)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cou" uri="http://id.loc.gov/vocabulary/relators/cou"/> -->
+               </category>
+               <category xml:id="loc_cov">
+                  <catDesc>
+                     <term>Cover Designer</term>
+                     <gloss>A person or organization responsible for the graphic design of a book
+                        cover, album cover, slipcase, box, container, etc. For a person or
+                        organization responsible for the graphic design of an entire book, use Book
+                        designer; for book jackets, use bookjacket designer.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cov" uri="http://id.loc.gov/vocabulary/relators/cov"/> -->
+               </category>
+               <category xml:id="loc_cpc">
+                  <catDesc>
+                     <term>Copyright Claimant</term>
+                     <gloss>A person or organization listed as a copyright owner at the time of
+                        registration. Copyright can be granted or later transferred to another
+                        person or organization, at which time the claimant becomes the copyright
+                        holder.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cpc" uri="http://id.loc.gov/vocabulary/relators/cpc"/> -->
+               </category>
+               <category xml:id="loc_cpe">
+                  <catDesc>
+                     <term>Complainant-appellee</term>
+                     <gloss>A complainant against whom an appeal is taken from one court or
+                        jurisdiction to another to reverse the judgment, usually in an equity
+                        proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cpe" uri="http://id.loc.gov/vocabulary/relators/cpe"/> -->
+               </category>
+               <category xml:id="loc_cph">
+                  <catDesc>
+                     <term>Copyright Holder</term>
+                     <gloss>A person or organization to whom copy and legal rights have been granted
+                        or transferred for the intellectual content of a work. The copyright holder,
+                        although not necessarily the creator of the work, usually has the exclusive
+                        right to benefit financially from the sale and use of the work to which the
+                        associated copyright protection applies.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cph" uri="http://id.loc.gov/vocabulary/relators/cph"/> -->
+               </category>
+               <category xml:id="loc_cpl">
+                  <catDesc>
+                     <term>Complainant</term>
+                     <gloss>A person or organization who applies to the courts for redress, usually
+                        in an equity proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cpl" uri="http://id.loc.gov/vocabulary/relators/cpl"/> -->
+               </category>
+               <category xml:id="loc_cpt">
+                  <catDesc>
+                     <term>Complainant-appellant</term>
+                     <gloss>A complainant who takes an appeal from one court or jurisdiction to
+                        another to reverse the judgment, usually in an equity proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cpt" uri="http://id.loc.gov/vocabulary/relators/cpt"/> -->
+               </category>
+               <category xml:id="loc_cre">
+                  <catDesc>
+                     <term>Creator</term>
+                     <gloss>A person or organization responsible for the intellectual or artistic
+                        content of a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cre" uri="http://id.loc.gov/vocabulary/relators/cre"/> -->
+               </category>
+               <category xml:id="loc_crp">
+                  <catDesc>
+                     <term>Correspondent</term>
+                     <gloss>A person or organization who was either the writer or recipient of a
+                        letter or other communication.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="crp" uri="http://id.loc.gov/vocabulary/relators/crp"/> -->
+               </category>
+               <category xml:id="loc_crr">
+                  <catDesc>
+                     <term>Corrector</term>
+                     <gloss>A person or organization who is a corrector of manuscripts, such as the
+                        scriptorium official who corrected the work of a scribe. For printed matter,
+                        use Proofreader.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="crr" uri="http://id.loc.gov/vocabulary/relators/crr"/> -->
+               </category>
+               <category xml:id="loc_crt">
+                  <catDesc>
+                     <term>Court Reporter</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        preparing a court's opinions for publication.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="crt" uri="http://id.loc.gov/vocabulary/relators/crt"/> -->
+               </category>
+               <category xml:id="loc_csl">
+                  <catDesc>
+                     <term>Consultant</term>
+                     <gloss>A person or organization relevant to a resource, who is called upon for
+                        professional advice or services in a specialized field of knowledge or
+                        training.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="csl" uri="http://id.loc.gov/vocabulary/relators/csl"/> -->
+               </category>
+               <category xml:id="loc_csp">
+                  <catDesc>
+                     <term>Consultant to a Project</term>
+                     <gloss>A person or organization relevant to a resource, who is engaged
+                        specifically to provide an intellectual overview of a strategic or
+                        operational task and by analysis, specification, or instruction, to create
+                        or propose a cost-effective course of action or solution.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="csp" uri="http://id.loc.gov/vocabulary/relators/csp"/> -->
+               </category>
+               <category xml:id="loc_cst">
+                  <catDesc>
+                     <term>Costume Designer</term>
+                     <gloss>A person, family, or organization that designs the costumes for a moving
+                        image production or for a musical or dramatic presentation or
+                        entertainment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cst" uri="http://id.loc.gov/vocabulary/relators/cst"/> -->
+               </category>
+               <category xml:id="loc_ctb">
+                  <catDesc>
+                     <term>Contributor</term>
+                     <gloss>A person, family or organization responsible for making contributions to
+                        the resource. This includes those whose work has been contributed to a
+                        larger work, such as an anthology, serial publication, or other compilation
+                        of individual works. If a more specific role is available, prefer that, e.g.
+                        editor, compiler, illustrator.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ctb" uri="http://id.loc.gov/vocabulary/relators/ctb"/> -->
+               </category>
+               <category xml:id="loc_cte">
+                  <catDesc>
+                     <term>Contestee-appellee</term>
+                     <gloss>A contestee against whom an appeal is taken from one court or
+                        jurisdiction to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cte" uri="http://id.loc.gov/vocabulary/relators/cte"/> -->
+               </category>
+               <category xml:id="loc_ctg">
+                  <catDesc>
+                     <term>Cartographer</term>
+                     <gloss>A person, family, or organization responsible for creating a map, atlas,
+                        globe, or other cartographic work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ctg" uri="http://id.loc.gov/vocabulary/relators/ctg"/> -->
+               </category>
+               <category xml:id="loc_ctr">
+                  <catDesc>
+                     <term>Contractor</term>
+                     <gloss>A person or organization relevant to a resource, who enters into a
+                        contract with another person or organization to perform a specific
+                        task.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ctr" uri="http://id.loc.gov/vocabulary/relators/ctr"/> -->
+               </category>
+               <category xml:id="loc_cts">
+                  <catDesc>
+                     <term>Contestee</term>
+                     <gloss>A person(s) or organization defending a claim, decision, result, etc.
+                        being opposed, resisted, or disputed in a court of law.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cts" uri="http://id.loc.gov/vocabulary/relators/cts"/> -->
+               </category>
+               <category xml:id="loc_ctt">
+                  <catDesc>
+                     <term>Contestee-appellant</term>
+                     <gloss>A contestee who takes an appeal from one court or jurisdiction to
+                        another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ctt" uri="http://id.loc.gov/vocabulary/relators/ctt"/> -->
+               </category>
+               <category xml:id="loc_cur">
+                  <catDesc>
+                     <term>Curator</term>
+                     <gloss>A person, family, or organization conceiving, aggregating, and/or
+                        organizing an exhibition, collection, or other item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cur" uri="http://id.loc.gov/vocabulary/relators/cur"/> -->
+               </category>
+               <category xml:id="loc_cwt">
+                  <catDesc>
+                     <term>Commentator for Written Text</term>
+                     <gloss>A person or organization responsible for the commentary or explanatory
+                        notes about a text. For the writer of manuscript annotations in a printed
+                        book, use Annotator.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="cwt" uri="http://id.loc.gov/vocabulary/relators/cwt"/> -->
+               </category>
+               <category xml:id="loc_dbd">
+                  <catDesc>
+                     <term>Dubbing Director</term>
+                     <gloss>A person responsible for the general management and supervision of
+                        adding new dialog or other sounds to complete a soundtrack.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dbd" uri="http://id.loc.gov/vocabulary/relators/dbd"/> -->
+               </category>
+               <category xml:id="loc_dbp">
+                  <catDesc>
+                     <term>Distribution Place</term>
+                     <gloss>A place from which a resource, e.g., a serial, is distributed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dbp" uri="http://id.loc.gov/vocabulary/relators/dbp"/> -->
+               </category>
+               <category xml:id="loc_dfd">
+                  <catDesc>
+                     <term>Defendant</term>
+                     <gloss>A person or organization who is accused in a criminal proceeding or sued
+                        in a civil proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dfd" uri="http://id.loc.gov/vocabulary/relators/dfd"/> -->
+               </category>
+               <category xml:id="loc_dfe">
+                  <catDesc>
+                     <term>Defendant-appellee</term>
+                     <gloss>A defendant against whom an appeal is taken from one court or
+                        jurisdiction to another to reverse the judgment, usually in a legal
+                        action.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dfe" uri="http://id.loc.gov/vocabulary/relators/dfe"/> -->
+               </category>
+               <category xml:id="loc_dft">
+                  <catDesc>
+                     <term>Defendant-appellant</term>
+                     <gloss>A defendant who takes an appeal from one court or jurisdiction to
+                        another to reverse the judgment, usually in a legal action.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dft" uri="http://id.loc.gov/vocabulary/relators/dft"/> -->
+               </category>
+               <category xml:id="loc_dgc">
+                  <catDesc>
+                     <term>Degree Committee Member</term>
+                     <gloss>A person who is part of a committee that considers the merit of a
+                        thesis, dissertation, or other submission by an academic degree
+                        candidate.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dgc" uri="http://id.loc.gov/vocabulary/relators/dgc"/> -->
+               </category>
+               <category xml:id="loc_dgg">
+                  <catDesc>
+                     <term>Degree Granting Institution</term>
+                     <gloss>An organization granting an academic degree.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dgg" uri="http://id.loc.gov/vocabulary/relators/dgg"/> -->
+               </category>
+               <category xml:id="loc_dgs">
+                  <catDesc>
+                     <term>Degree Supervisor</term>
+                     <gloss>A person overseeing a higher-level academic degree.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dgs" uri="http://id.loc.gov/vocabulary/relators/dgs"/> -->
+               </category>
+               <category xml:id="loc_dis">
+                  <catDesc>
+                     <term>Dissertant</term>
+                     <gloss>A person who presents a thesis for a university or higher-level
+                        educational degree.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dis" uri="http://id.loc.gov/vocabulary/relators/dis"/> -->
+               </category>
+               <category xml:id="loc_djo">
+                  <catDesc>
+                     <term>Dj</term>
+                     <gloss>A person who mixes recorded tracks together during a live performance or
+                        in a recording studio to appear as one continuous track.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="djo" uri="http://id.loc.gov/vocabulary/relators/djo"/> -->
+               </category>
+               <category xml:id="loc_dln">
+                  <catDesc>
+                     <term>Delineator</term>
+                     <gloss>A person or organization executing technical drawings from others'
+                        designs.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dln" uri="http://id.loc.gov/vocabulary/relators/dln"/> -->
+               </category>
+               <category xml:id="loc_dnc">
+                  <catDesc>
+                     <term>Dancer</term>
+                     <gloss>A performer who dances in a musical, dramatic, etc.,
+                        presentation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dnc" uri="http://id.loc.gov/vocabulary/relators/dnc"/> -->
+               </category>
+               <category xml:id="loc_dnr">
+                  <catDesc>
+                     <term>Donor</term>
+                     <gloss>A former owner of an item who donated that item to another
+                        owner.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dnr" uri="http://id.loc.gov/vocabulary/relators/dnr"/> -->
+               </category>
+               <category xml:id="loc_dpc">
+                  <catDesc>
+                     <term>Depicted</term>
+                     <gloss>An entity depicted or portrayed in a work, particularly in a work of
+                        art.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dpc" uri="http://id.loc.gov/vocabulary/relators/dpc"/> -->
+               </category>
+               <category xml:id="loc_dpt">
+                  <catDesc>
+                     <term>Depositor</term>
+                     <gloss>A current owner of an item who deposited the item into the custody of
+                        another person, family, or organization, while still retaining
+                        ownership.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dpt" uri="http://id.loc.gov/vocabulary/relators/dpt"/> -->
+               </category>
+               <category xml:id="loc_drm">
+                  <catDesc>
+                     <term>Draftsman</term>
+                     <gloss>A person, family, or organization contributing to a resource by an
+                        architect, inventor, etc., by making detailed plans or drawings for
+                        buildings, ships, aircraft, machines, objects, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="drm" uri="http://id.loc.gov/vocabulary/relators/drm"/> -->
+               </category>
+               <category xml:id="loc_drt">
+                  <catDesc>
+                     <term>Director</term>
+                     <gloss>A person responsible for the general management and supervision of a
+                        filmed performance, a radio or television program, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="drt" uri="http://id.loc.gov/vocabulary/relators/drt"/> -->
+               </category>
+               <category xml:id="loc_dsr">
+                  <catDesc>
+                     <term>Designer</term>
+                     <gloss>A person, family, or organization responsible for creating a design for
+                        an object.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dsr" uri="http://id.loc.gov/vocabulary/relators/dsr"/> -->
+               </category>
+               <category xml:id="loc_dst">
+                  <catDesc>
+                     <term>Distributor</term>
+                     <gloss>A person or organization that has exclusive or shared marketing rights
+                        for a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dst" uri="http://id.loc.gov/vocabulary/relators/dst"/> -->
+               </category>
+               <category xml:id="loc_dtc">
+                  <catDesc>
+                     <term>Data Contributor</term>
+                     <gloss>A person or organization that submits data for inclusion in a database
+                        or other collection of data.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dtc" uri="http://id.loc.gov/vocabulary/relators/dtc"/> -->
+               </category>
+               <category xml:id="loc_dte">
+                  <catDesc>
+                     <term>Dedicatee</term>
+                     <gloss>A person, family, or organization to whom a resource is
+                        dedicated.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dte" uri="http://id.loc.gov/vocabulary/relators/dte"/> -->
+               </category>
+               <category xml:id="loc_dtm">
+                  <catDesc>
+                     <term>Data Manager</term>
+                     <gloss>A person or organization responsible for managing databases or other
+                        data sources.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dtm" uri="http://id.loc.gov/vocabulary/relators/dtm"/> -->
+               </category>
+               <category xml:id="loc_dto">
+                  <catDesc>
+                     <term>Dedicator</term>
+                     <gloss>A person who writes a dedication, which may be a formal statement or in
+                        epistolary or verse form.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dto" uri="http://id.loc.gov/vocabulary/relators/dto"/> -->
+               </category>
+               <category xml:id="loc_dub">
+                  <catDesc>
+                     <term>Dubious Author</term>
+                     <gloss>A person or organization to which authorship has been dubiously or
+                        incorrectly ascribed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="dub" uri="http://id.loc.gov/vocabulary/relators/dub"/> -->
+               </category>
+               <category xml:id="loc_edc">
+                  <catDesc>
+                     <term>Editor of Compilation</term>
+                     <gloss>A person, family, or organization contributing to a collective or
+                        aggregate work by selecting and putting together works, or parts of works,
+                        by one or more creators. For compilations of data, information, etc., that
+                        result in new works, see compiler.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="edc" uri="http://id.loc.gov/vocabulary/relators/edc"/> -->
+               </category>
+               <category xml:id="loc_edd">
+                  <catDesc>
+                     <term>Editorial Director</term>
+                     <gloss>A person or organization having legal and/or intellectual responsibility
+                        other than creation for the content of a serial, integrating resource, or
+                        multipart monographic work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="edd" uri="http://id.loc.gov/vocabulary/relators/edd"/> -->
+               </category>
+               <category xml:id="loc_edm">
+                  <catDesc>
+                     <term>Editor of Moving Image Work</term>
+                     <gloss>A person, family, or organization responsible for assembling, arranging,
+                        and trimming film, video, or other moving image formats, including both
+                        visual and audio aspects.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="edm" uri="http://id.loc.gov/vocabulary/relators/edm"/> -->
+               </category>
+               <category xml:id="loc_edt">
+                  <catDesc>
+                     <term>Editor</term>
+                     <gloss>A person, family, or organization contributing to a resource by revising
+                        or elucidating the content, e.g., adding an introduction, notes, or other
+                        critical matter. An editor may also prepare a resource for production,
+                        publication, or distribution. For major revisions, adaptations, etc., that
+                        substantially change the nature and content of the original work, resulting
+                        in a new work, see author.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="edt" uri="http://id.loc.gov/vocabulary/relators/edt"/> -->
+               </category>
+               <category xml:id="loc_egr">
+                  <catDesc>
+                     <term>Engraver</term>
+                     <gloss>A person or organization who cuts letters, figures, etc. on a surface,
+                        such as a wooden or metal plate used for printing.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="egr" uri="http://id.loc.gov/vocabulary/relators/egr"/> -->
+               </category>
+               <category xml:id="loc_elg">
+                  <catDesc>
+                     <term>Electrician</term>
+                     <gloss>A person responsible for setting up a lighting rig and focusing the
+                        lights for a production, and running the lighting at a performance.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="elg" uri="http://id.loc.gov/vocabulary/relators/elg"/> -->
+               </category>
+               <category xml:id="loc_elt">
+                  <catDesc>
+                     <term>Electrotyper</term>
+                     <gloss>A person or organization who creates a duplicate printing surface by
+                        pressure molding and electrodepositing of metal that is then backed up with
+                        lead for printing.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="elt" uri="http://id.loc.gov/vocabulary/relators/elt"/> -->
+               </category>
+               <category xml:id="loc_eng">
+                  <catDesc>
+                     <term>Engineer</term>
+                     <gloss>A person or organization that is responsible for technical planning and
+                        design, particularly with construction.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="eng" uri="http://id.loc.gov/vocabulary/relators/eng"/> -->
+               </category>
+               <category xml:id="loc_enj">
+                  <catDesc>
+                     <term>Enacting Jurisdiction</term>
+                     <gloss>A jurisdiction enacting a law, regulation, constitution, court rule,
+                        etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="enj" uri="http://id.loc.gov/vocabulary/relators/enj"/> -->
+               </category>
+               <category xml:id="loc_etr">
+                  <catDesc>
+                     <term>Etcher</term>
+                     <gloss>A person or organization who produces text or images for printing by
+                        subjecting metal, glass, or some other surface to acid or the corrosive
+                        action of some other substance.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="etr" uri="http://id.loc.gov/vocabulary/relators/etr"/> -->
+               </category>
+               <category xml:id="loc_evp">
+                  <catDesc>
+                     <term>Event Place</term>
+                     <gloss>A place where an event such as a conference or a concert took
+                        place.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="evp" uri="http://id.loc.gov/vocabulary/relators/evp"/> -->
+               </category>
+               <category xml:id="loc_exp">
+                  <catDesc>
+                     <term>Expert</term>
+                     <gloss>A person or organization in charge of the description and appraisal of
+                        the value of goods, particularly rare items, works of art, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="exp" uri="http://id.loc.gov/vocabulary/relators/exp"/> -->
+               </category>
+               <category xml:id="loc_fac">
+                  <catDesc>
+                     <term>Facsimilist</term>
+                     <gloss>A person or organization that executed the facsimile.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fac" uri="http://id.loc.gov/vocabulary/relators/fac"/> -->
+               </category>
+               <category xml:id="loc_fds">
+                  <catDesc>
+                     <term>Film Distributor</term>
+                     <gloss>A person, family, or organization involved in distributing a moving
+                        image resource to theatres or other distribution channels.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fds" uri="http://id.loc.gov/vocabulary/relators/fds"/> -->
+               </category>
+               <category xml:id="loc_fld">
+                  <catDesc>
+                     <term>Field Director</term>
+                     <gloss>A person or organization that manages or supervises the work done to
+                        collect raw data or do research in an actual setting or environment
+                        (typically applies to the natural and social sciences)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fld" uri="http://id.loc.gov/vocabulary/relators/fld"/> -->
+               </category>
+               <category xml:id="loc_flm">
+                  <catDesc>
+                     <term>Film Editor</term>
+                     <gloss>A person who, following the script and in creative cooperation with the
+                        Director, selects, arranges, and assembles the filmed material, controls the
+                        synchronization of picture and sound, and participates in other
+                        post-production tasks such as sound mixing and visual effects processing.
+                        Today, picture editing is often performed digitally.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="flm" uri="http://id.loc.gov/vocabulary/relators/flm"/> -->
+               </category>
+               <category xml:id="loc_fmd">
+                  <catDesc>
+                     <term>Film Director</term>
+                     <gloss>A director responsible for the general management and supervision of a
+                        filmed performance.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fmd" uri="http://id.loc.gov/vocabulary/relators/fmd"/> -->
+               </category>
+               <category xml:id="loc_fmk">
+                  <catDesc>
+                     <term>Filmmaker</term>
+                     <gloss>A person, family or organization responsible for creating an independent
+                        or personal film. A filmmaker is individually responsible for the conception
+                        and execution of all aspects of the film.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fmk" uri="http://id.loc.gov/vocabulary/relators/fmk"/> -->
+               </category>
+               <category xml:id="loc_fmo">
+                  <catDesc>
+                     <term>Former Owner</term>
+                     <gloss>A person, family, or organization formerly having legal possession of an
+                        item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fmo" uri="http://id.loc.gov/vocabulary/relators/fmo"/> -->
+               </category>
+               <category xml:id="loc_fmp">
+                  <catDesc>
+                     <term>Film Producer</term>
+                     <gloss>A producer responsible for most of the business aspects of a
+                        film.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fmp" uri="http://id.loc.gov/vocabulary/relators/fmp"/> -->
+               </category>
+               <category xml:id="loc_fnd">
+                  <catDesc>
+                     <term>Funder</term>
+                     <gloss>A person or organization that furnished financial support for the
+                        production of the work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fnd" uri="http://id.loc.gov/vocabulary/relators/fnd"/> -->
+               </category>
+               <category xml:id="loc_fon">
+                  <catDesc>
+                     <term>Founder</term>
+                     <gloss>A person responsible for initiating a diachronic work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fon" uri="http://id.loc.gov/vocabulary/relators/fon"/> -->
+               </category>
+               <category xml:id="loc_fpy">
+                  <catDesc>
+                     <term>First Party</term>
+                     <gloss>A person or organization who is identified as the only party or the
+                        party of the first party. In the case of transfer of rights, this is the
+                        assignor, transferor, licensor, grantor, etc. Multiple parties can be named
+                        jointly as the first party.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="fpy" uri="http://id.loc.gov/vocabulary/relators/fpy"/> -->
+               </category>
+               <category xml:id="loc_frg">
+                  <catDesc>
+                     <term>Forger</term>
+                     <gloss>A person or organization who makes or imitates something of value or
+                        importance, especially with the intent to defraud.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="frg" uri="http://id.loc.gov/vocabulary/relators/frg"/> -->
+               </category>
+               <category xml:id="loc_gdv">
+                  <catDesc>
+                     <term>Game Developer</term>
+                     <gloss>A person or organization who researches, designs, implements or tests
+                        video games, computer games, virtual reality (VR) games, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="gdv" uri="http://id.loc.gov/vocabulary/relators/gdv"/> -->
+               </category>
+               <category xml:id="loc_gis">
+                  <catDesc>
+                     <term>Geographic Information Specialist</term>
+                     <gloss>A person responsible for geographic information system (GIS) development
+                        and integration with global positioning system data.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="gis" uri="http://id.loc.gov/vocabulary/relators/gis"/> -->
+               </category>
+               <category xml:id="loc_his">
+                  <catDesc>
+                     <term>Host Institution</term>
+                     <gloss>An organization hosting the event, exhibit, conference, etc., which gave
+                        rise to a resource, but having little or no responsibility for the content
+                        of the resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="his" uri="http://id.loc.gov/vocabulary/relators/his"/> -->
+               </category>
+               <category xml:id="loc_hnr">
+                  <catDesc>
+                     <term>Honoree</term>
+                     <gloss>A person, family, or organization honored by a work or item (e.g., the
+                        honoree of a festschrift, a person to whom a copy is presented)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="hnr" uri="http://id.loc.gov/vocabulary/relators/hnr"/> -->
+               </category>
+               <category xml:id="loc_hst">
+                  <catDesc>
+                     <term>Host</term>
+                     <gloss>A person contributing to a resource by leading a program (often
+                        broadcast) that includes other guests, performers, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="hst" uri="http://id.loc.gov/vocabulary/relators/hst"/> -->
+               </category>
+               <category xml:id="loc_ill">
+                  <catDesc>
+                     <term>Illustrator</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        supplementing the primary content with drawings, diagrams, photographs, etc.
+                        If the work is primarily the artistic content created by this entity, use
+                        artist or photographer.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ill" uri="http://id.loc.gov/vocabulary/relators/ill"/> -->
+               </category>
+               <category xml:id="loc_ilu">
+                  <catDesc>
+                     <term>Illuminator</term>
+                     <gloss>A person providing decoration to a specific item using precious metals
+                        or color, often with elaborate designs and motifs.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ilu" uri="http://id.loc.gov/vocabulary/relators/ilu"/> -->
+               </category>
+               <category xml:id="loc_ins">
+                  <catDesc>
+                     <term>Inscriber</term>
+                     <gloss>A person who has written a statement of dedication or gift.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ins" uri="http://id.loc.gov/vocabulary/relators/ins"/> -->
+               </category>
+               <category xml:id="loc_inv">
+                  <catDesc>
+                     <term>Inventor</term>
+                     <gloss>A person, family, or organization responsible for creating a new device
+                        or process.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="inv" uri="http://id.loc.gov/vocabulary/relators/inv"/> -->
+               </category>
+               <category xml:id="loc_isb">
+                  <catDesc>
+                     <term>Issuing Body</term>
+                     <gloss>A person, family or organization issuing a work, such as an official
+                        organ of the body.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="isb" uri="http://id.loc.gov/vocabulary/relators/isb"/> -->
+               </category>
+               <category xml:id="loc_itr">
+                  <catDesc>
+                     <term>Instrumentalist</term>
+                     <gloss>A performer contributing to a resource by playing a musical
+                        instrument.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="itr" uri="http://id.loc.gov/vocabulary/relators/itr"/> -->
+               </category>
+               <category xml:id="loc_ive">
+                  <catDesc>
+                     <term>Interviewee</term>
+                     <gloss>A person, family or organization responsible for creating or
+                        contributing to a resource by responding to an interviewer, usually a
+                        reporter, pollster, or some other information gathering agent.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ive" uri="http://id.loc.gov/vocabulary/relators/ive"/> -->
+               </category>
+               <category xml:id="loc_ivr">
+                  <catDesc>
+                     <term>Interviewer</term>
+                     <gloss>A person, family, or organization responsible for creating or
+                        contributing to a resource by acting as an interviewer, reporter, pollster,
+                        or some other information gathering agent.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ivr" uri="http://id.loc.gov/vocabulary/relators/ivr"/> -->
+               </category>
+               <category xml:id="loc_jud">
+                  <catDesc>
+                     <term>Judge</term>
+                     <gloss>A person who hears and decides on legal matters in court.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="jud" uri="http://id.loc.gov/vocabulary/relators/jud"/> -->
+               </category>
+               <category xml:id="loc_jug">
+                  <catDesc>
+                     <term>Jurisdiction Governed</term>
+                     <gloss>A jurisdiction governed by a law, regulation, etc., that was enacted by
+                        another jurisdiction.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="jug" uri="http://id.loc.gov/vocabulary/relators/jug"/> -->
+               </category>
+               <category xml:id="loc_lbr">
+                  <catDesc>
+                     <term>Laboratory</term>
+                     <gloss>An organization that provides scientific analyses of material
+                        samples.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lbr" uri="http://id.loc.gov/vocabulary/relators/lbr"/> -->
+               </category>
+               <category xml:id="loc_lbt">
+                  <catDesc>
+                     <term>Librettist</term>
+                     <gloss>An author of a libretto of an opera or other stage work, or an
+                        oratorio.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lbt" uri="http://id.loc.gov/vocabulary/relators/lbt"/> -->
+               </category>
+               <category xml:id="loc_ldr">
+                  <catDesc>
+                     <term>Laboratory Director</term>
+                     <gloss>A person or organization that manages or supervises work done in a
+                        controlled setting or environment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ldr" uri="http://id.loc.gov/vocabulary/relators/ldr"/> -->
+               </category>
+               <category xml:id="loc_led">
+                  <catDesc>
+                     <term>Lead</term>
+                     <gloss>A person or organization that takes primary responsibility for a
+                        particular activity or endeavor. May be combined with another relator term
+                        or code to show the greater importance this person or organization has
+                        regarding that particular role. If more than one relator is assigned to a
+                        heading, use the Lead relator only if it applies to all the
+                        relators.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="led" uri="http://id.loc.gov/vocabulary/relators/led"/> -->
+               </category>
+               <category xml:id="loc_lee">
+                  <catDesc>
+                     <term>Libelee-appellee</term>
+                     <gloss>A libelee against whom an appeal is taken from one ecclesiastical court
+                        or admiralty to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lee" uri="http://id.loc.gov/vocabulary/relators/lee"/> -->
+               </category>
+               <category xml:id="loc_lel">
+                  <catDesc>
+                     <term>Libelee</term>
+                     <gloss>A person or organization against whom a libel has been filed in an
+                        ecclesiastical court or admiralty.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lel" uri="http://id.loc.gov/vocabulary/relators/lel"/> -->
+               </category>
+               <category xml:id="loc_len">
+                  <catDesc>
+                     <term>Lender</term>
+                     <gloss>A person or organization permitting the temporary use of a book,
+                        manuscript, etc., such as for photocopying or microfilming.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="len" uri="http://id.loc.gov/vocabulary/relators/len"/> -->
+               </category>
+               <category xml:id="loc_let">
+                  <catDesc>
+                     <term>Libelee-appellant</term>
+                     <gloss>A libelee who takes an appeal from one ecclesiastical court or admiralty
+                        to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="let" uri="http://id.loc.gov/vocabulary/relators/let"/> -->
+               </category>
+               <category xml:id="loc_lgd">
+                  <catDesc>
+                     <term>Lighting Designer</term>
+                     <gloss>A person or organization who designs the lighting scheme for a
+                        theatrical presentation, entertainment, motion picture, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lgd" uri="http://id.loc.gov/vocabulary/relators/lgd"/> -->
+               </category>
+               <category xml:id="loc_lie">
+                  <catDesc>
+                     <term>Libelant-appellee</term>
+                     <gloss>A libelant against whom an appeal is taken from one ecclesiastical court
+                        or admiralty to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lie" uri="http://id.loc.gov/vocabulary/relators/lie"/> -->
+               </category>
+               <category xml:id="loc_lil">
+                  <catDesc>
+                     <term>Libelant</term>
+                     <gloss>A person or organization who files a libel in an ecclesiastical or
+                        admiralty case.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lil" uri="http://id.loc.gov/vocabulary/relators/lil"/> -->
+               </category>
+               <category xml:id="loc_lit">
+                  <catDesc>
+                     <term>Libelant-appellant</term>
+                     <gloss>A libelant who takes an appeal from one ecclesiastical court or
+                        admiralty to another to reverse the judgment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lit" uri="http://id.loc.gov/vocabulary/relators/lit"/> -->
+               </category>
+               <category xml:id="loc_lsa">
+                  <catDesc>
+                     <term>Landscape Architect</term>
+                     <gloss>An architect responsible for creating landscape works. This work
+                        involves coordinating the arrangement of existing and proposed land features
+                        and structures.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lsa" uri="http://id.loc.gov/vocabulary/relators/lsa"/> -->
+               </category>
+               <category xml:id="loc_lse">
+                  <catDesc>
+                     <term>Licensee</term>
+                     <gloss>A person or organization who is an original recipient of the right to
+                        print or publish.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lse" uri="http://id.loc.gov/vocabulary/relators/lse"/> -->
+               </category>
+               <category xml:id="loc_lso">
+                  <catDesc>
+                     <term>Licensor</term>
+                     <gloss>A person or organization who is a signer of the license, imprimatur,
+                        etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lso" uri="http://id.loc.gov/vocabulary/relators/lso"/> -->
+               </category>
+               <category xml:id="loc_ltg">
+                  <catDesc>
+                     <term>Lithographer</term>
+                     <gloss>A person or organization who prepares the stone or plate for
+                        lithographic printing, including a graphic artist creating a design directly
+                        on the surface from which printing will be done.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ltg" uri="http://id.loc.gov/vocabulary/relators/ltg"/> -->
+               </category>
+               <category xml:id="loc_ltr">
+                  <catDesc>
+                     <term>Letterer</term>
+                     <gloss>A person who draws text and graphic sound effects for a comic book,
+                        graphic novel, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ltr" uri="http://id.loc.gov/vocabulary/relators/ltr"/> -->
+               </category>
+               <category xml:id="loc_lyr">
+                  <catDesc>
+                     <term>Lyricist</term>
+                     <gloss>An author of the words of a non-dramatic musical work (e.g. the text of
+                        a song), except for oratorios.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="lyr" uri="http://id.loc.gov/vocabulary/relators/lyr"/> -->
+               </category>
+               <category xml:id="loc_mcp">
+                  <catDesc>
+                     <term>Music Copyist</term>
+                     <gloss>A person who transcribes or copies musical notation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mcp" uri="http://id.loc.gov/vocabulary/relators/mcp"/> -->
+               </category>
+               <category xml:id="loc_mdc">
+                  <catDesc>
+                     <term>Metadata Contact</term>
+                     <gloss>A person or organization primarily responsible for compiling and
+                        maintaining the original description of a metadata set (e.g., geospatial
+                        metadata set)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mdc" uri="http://id.loc.gov/vocabulary/relators/mdc"/> -->
+               </category>
+               <category xml:id="loc_med">
+                  <catDesc>
+                     <term>Medium</term>
+                     <gloss>A person held to be a channel of communication between the earthly world
+                        and a world of spirits.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="med" uri="http://id.loc.gov/vocabulary/relators/med"/> -->
+               </category>
+               <category xml:id="loc_mfp">
+                  <catDesc>
+                     <term>Manufacture Place</term>
+                     <gloss>The place of manufacture (e.g., printing, duplicating, casting, etc.) of
+                        a resource in a published form.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mfp" uri="http://id.loc.gov/vocabulary/relators/mfp"/> -->
+               </category>
+               <category xml:id="loc_mfr">
+                  <catDesc>
+                     <term>Manufacturer</term>
+                     <gloss>A person or organization responsible for printing, duplicating, casting,
+                        etc. a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mfr" uri="http://id.loc.gov/vocabulary/relators/mfr"/> -->
+               </category>
+               <category xml:id="loc_mka">
+                  <catDesc>
+                     <term>Makeup Artist</term>
+                     <gloss>A person who contributes to a moving image production or for a musical
+                        or dramatic presentation by applying makeup and prosthetics.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mka" uri="http://id.loc.gov/vocabulary/relators/mka"/> -->
+               </category>
+               <category xml:id="loc_mod">
+                  <catDesc>
+                     <term>Moderator</term>
+                     <gloss>A performer contributing to a resource by leading a program (often
+                        broadcast) where topics are discussed, usually with participation of experts
+                        in fields related to the discussion.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mod" uri="http://id.loc.gov/vocabulary/relators/mod"/> -->
+               </category>
+               <category xml:id="loc_mon">
+                  <catDesc>
+                     <term>Monitor</term>
+                     <gloss>A person or organization that supervises compliance with the contract
+                        and is responsible for the report and controls its distribution. Sometimes
+                        referred to as the grantee, or controlling agency.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mon" uri="http://id.loc.gov/vocabulary/relators/mon"/> -->
+               </category>
+               <category xml:id="loc_mrb">
+                  <catDesc>
+                     <term>Marbler</term>
+                     <gloss>The entity responsible for marbling paper, cloth, leather, etc. used in
+                        construction of a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mrb" uri="http://id.loc.gov/vocabulary/relators/mrb"/> -->
+               </category>
+               <category xml:id="loc_mrk">
+                  <catDesc>
+                     <term>Markup Editor</term>
+                     <gloss>A person or organization performing the coding of SGML, HTML, or XML
+                        markup of metadata, text, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mrk" uri="http://id.loc.gov/vocabulary/relators/mrk"/> -->
+               </category>
+               <category xml:id="loc_msd">
+                  <catDesc>
+                     <term>Musical Director</term>
+                     <gloss>A person who coordinates the activities of the composer, the sound
+                        editor, and sound mixers for a moving image production or for a musical or
+                        dramatic presentation or entertainment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="msd" uri="http://id.loc.gov/vocabulary/relators/msd"/> -->
+               </category>
+               <category xml:id="loc_mte">
+                  <catDesc>
+                     <term>Metal Engraver</term>
+                     <gloss>An engraver responsible for decorations, illustrations, letters, etc.
+                        cut on a metal surface for printing or decoration.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mte" uri="http://id.loc.gov/vocabulary/relators/mte"/> -->
+               </category>
+               <category xml:id="loc_mtk">
+                  <catDesc>
+                     <term>Minute Taker</term>
+                     <gloss>A person, family, or organization responsible for recording the minutes
+                        of a meeting.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mtk" uri="http://id.loc.gov/vocabulary/relators/mtk"/> -->
+               </category>
+               <category xml:id="loc_mup">
+                  <catDesc>
+                     <term>Music Programmer</term>
+                     <gloss>A person who uses electronic audio devices or computer software to
+                        generate sounds.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mup" uri="http://id.loc.gov/vocabulary/relators/mup"/> -->
+               </category>
+               <category xml:id="loc_mus">
+                  <catDesc>
+                     <term>Musician</term>
+                     <gloss>A person or organization who performs music or contributes to the
+                        musical content of a work when it is not possible or desirable to identify
+                        the function more precisely.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mus" uri="http://id.loc.gov/vocabulary/relators/mus"/> -->
+               </category>
+               <category xml:id="loc_mxe">
+                  <catDesc>
+                     <term>Mixing Engineer</term>
+                     <gloss>A person or organization contributing to the audio content of a resource
+                        by manipulating, mixing and assembling the tracks of an audio
+                        recording.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="mxe" uri="http://id.loc.gov/vocabulary/relators/mxe"/> -->
+               </category>
+               <category xml:id="loc_nan">
+                  <catDesc>
+                     <term>News Anchor</term>
+                     <gloss>A person who is in overall control of the presentation of a news or
+                        current affairs television program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="nan" uri="http://id.loc.gov/vocabulary/relators/nan"/> -->
+               </category>
+               <category xml:id="loc_nrt">
+                  <catDesc>
+                     <term>Narrator</term>
+                     <gloss>A performer contributing to a resource by reading or speaking in order
+                        to give an account of an act, occurrence, course of events, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="nrt" uri="http://id.loc.gov/vocabulary/relators/nrt"/> -->
+               </category>
+               <category xml:id="loc_onp">
+                  <catDesc>
+                     <term>Onscreen Participant</term>
+                     <gloss>A person contributing to a nonfiction moving image work by taking an
+                        active role as a participant.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="onp" uri="http://id.loc.gov/vocabulary/relators/onp"/> -->
+               </category>
+               <category xml:id="loc_opn">
+                  <catDesc>
+                     <term>Opponent</term>
+                     <gloss>A person or organization responsible for opposing a thesis or
+                        dissertation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="opn" uri="http://id.loc.gov/vocabulary/relators/opn"/> -->
+               </category>
+               <category xml:id="loc_org">
+                  <catDesc>
+                     <term>Originator</term>
+                     <gloss>A person or organization performing the work, i.e., the name of a person
+                        or organization associated with the intellectual content of the work. This
+                        category does not include the publisher or personal affiliation, or sponsor
+                        except where it is also the corporate author.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="org" uri="http://id.loc.gov/vocabulary/relators/org"/> -->
+               </category>
+               <category xml:id="loc_orm">
+                  <catDesc>
+                     <term>Organizer</term>
+                     <gloss>A person, family, or organization organizing the exhibit, event,
+                        conference, etc., which gave rise to a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="orm" uri="http://id.loc.gov/vocabulary/relators/orm"/> -->
+               </category>
+               <category xml:id="loc_osp">
+                  <catDesc>
+                     <term>Onscreen Presenter</term>
+                     <gloss>A performer contributing to an expression of a work by appearing on
+                        screen in nonfiction moving image materials or introductions to fiction
+                        moving image materials to provide contextual or background information. Use
+                        when another term (e.g., narrator, host) is either not applicable or not
+                        desired.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="osp" uri="http://id.loc.gov/vocabulary/relators/osp"/> -->
+               </category>
+               <category xml:id="loc_oth">
+                  <catDesc>
+                     <term>Other</term>
+                     <gloss>A role that has no equivalent in the MARC list.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="oth" uri="http://id.loc.gov/vocabulary/relators/oth"/> -->
+               </category>
+               <category xml:id="loc_own">
+                  <catDesc>
+                     <term>Owner</term>
+                     <gloss>A person, family, or organization that currently owns an item or
+                        collection, i.e., has legal possession of a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="own" uri="http://id.loc.gov/vocabulary/relators/own"/> -->
+               </category>
+               <category xml:id="loc_pad">
+                  <catDesc>
+                     <term>Place of Address</term>
+                     <gloss>The place to which a resource is sent, for example, the place of the
+                        postal address of a letter.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pad" uri="http://id.loc.gov/vocabulary/relators/pad"/> -->
+               </category>
+               <category xml:id="loc_pan">
+                  <catDesc>
+                     <term>Panelist</term>
+                     <gloss>A performer contributing to a resource by participating in a program
+                        (often broadcast) where topics are discussed, usually with participation of
+                        experts in fields related to the discussion.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pan" uri="http://id.loc.gov/vocabulary/relators/pan"/> -->
+               </category>
+               <category xml:id="loc_pat">
+                  <catDesc>
+                     <term>Patron</term>
+                     <gloss>A person or organization responsible for commissioning a work. Usually,
+                        a patron uses his or her means or influence to support the work of artists,
+                        writers, etc. This includes those who commission and pay for individual
+                        works.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pat" uri="http://id.loc.gov/vocabulary/relators/pat"/> -->
+               </category>
+               <category xml:id="loc_pbd">
+                  <catDesc>
+                     <term>Publisher Director</term>
+                     <gloss>A person or organization who presides over the elaboration of a
+                        collective work to ensure its coherence or continuity. This includes
+                        editors-in-chief, literary editors, editors of series, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pbd" uri="http://id.loc.gov/vocabulary/relators/pbd"/> -->
+               </category>
+               <category xml:id="loc_pbl">
+                  <catDesc>
+                     <term>Publisher</term>
+                     <gloss>A person or organization responsible for publishing, releasing, or
+                        issuing a resource.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pbl" uri="http://id.loc.gov/vocabulary/relators/pbl"/> -->
+               </category>
+               <category xml:id="loc_pdr">
+                  <catDesc>
+                     <term>Project Director</term>
+                     <gloss>A person or organization with primary responsibility for all essential
+                        aspects of a project, has overall responsibility for managing projects, or
+                        provides overall direction to a project manager.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pdr" uri="http://id.loc.gov/vocabulary/relators/pdr"/> -->
+               </category>
+               <category xml:id="loc_pfr">
+                  <catDesc>
+                     <term>Proofreader</term>
+                     <gloss>A person who corrects printed matter. For manuscripts, use
+                        corrector.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pfr" uri="http://id.loc.gov/vocabulary/relators/pfr"/> -->
+               </category>
+               <category xml:id="loc_pht">
+                  <catDesc>
+                     <term>Photographer</term>
+                     <gloss>A person, family, or organization responsible for creating a
+                        photographic work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pht" uri="http://id.loc.gov/vocabulary/relators/pht"/> -->
+               </category>
+               <category xml:id="loc_plt">
+                  <catDesc>
+                     <term>Platemaker</term>
+                     <gloss>A person, family, or organization involved in manufacturing a
+                        manifestation by preparing plates used in the production of printed images
+                        and/or text.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="plt" uri="http://id.loc.gov/vocabulary/relators/plt"/> -->
+               </category>
+               <category xml:id="loc_pma">
+                  <catDesc>
+                     <term>Permitting Agency</term>
+                     <gloss>An organization (usually a government agency) that issues permits under
+                        which work is accomplished.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pma" uri="http://id.loc.gov/vocabulary/relators/pma"/> -->
+               </category>
+               <category xml:id="loc_pmn">
+                  <catDesc>
+                     <term>Production Manager</term>
+                     <gloss>A person responsible for all technical and business matters in a
+                        production.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pmn" uri="http://id.loc.gov/vocabulary/relators/pmn"/> -->
+               </category>
+               <category xml:id="loc_pop">
+                  <catDesc>
+                     <term>Printer of Plates</term>
+                     <gloss>A person or organization who prints illustrations from plates.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pop" uri="http://id.loc.gov/vocabulary/relators/pop"/> -->
+               </category>
+               <category xml:id="loc_ppm">
+                  <catDesc>
+                     <term>Papermaker</term>
+                     <gloss>A person or organization responsible for the production of paper,
+                        usually from wood, cloth, or other fibrous material.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ppm" uri="http://id.loc.gov/vocabulary/relators/ppm"/> -->
+               </category>
+               <category xml:id="loc_ppt">
+                  <catDesc>
+                     <term>Puppeteer</term>
+                     <gloss>A performer contributing to a resource by manipulating, controlling, or
+                        directing puppets or marionettes in a moving image production or a musical
+                        or dramatic presentation or entertainment.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ppt" uri="http://id.loc.gov/vocabulary/relators/ppt"/> -->
+               </category>
+               <category xml:id="loc_pra">
+                  <catDesc>
+                     <term>Praeses</term>
+                     <gloss>A person who is the faculty moderator of an academic disputation,
+                        normally proposing a thesis and participating in the ensuing
+                        disputation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pra" uri="http://id.loc.gov/vocabulary/relators/pra"/> -->
+               </category>
+               <category xml:id="loc_prc">
+                  <catDesc>
+                     <term>Process Contact</term>
+                     <gloss>A person or organization primarily responsible for performing or
+                        initiating a process, such as is done with the collection of metadata
+                        sets.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prc" uri="http://id.loc.gov/vocabulary/relators/prc"/> -->
+               </category>
+               <category xml:id="loc_prd">
+                  <catDesc>
+                     <term>Production Personnel</term>
+                     <gloss>A person or organization associated with the production (props,
+                        lighting, special effects, visual effects, etc.) of a musical or dramatic
+                        presentation, moving image, or audio work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prd" uri="http://id.loc.gov/vocabulary/relators/prd"/> -->
+               </category>
+               <category xml:id="loc_pre">
+                  <catDesc>
+                     <term>Presenter</term>
+                     <gloss>A person or organization mentioned in an "X presents" credit for moving
+                        image materials and who is associated with production, finance, or
+                        distribution in some way. A vanity credit; in early years, normally the head
+                        of a studio.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pre" uri="http://id.loc.gov/vocabulary/relators/pre"/> -->
+               </category>
+               <category xml:id="loc_prf">
+                  <catDesc>
+                     <term>Performer</term>
+                     <gloss>A person contributing to a resource by performing music, acting,
+                        dancing, speaking, etc., often in a musical or dramatic presentation,
+                        etc. If specific codes are used, [prf] is used for a person whose principal
+                        skill is not known or specified.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prf" uri="http://id.loc.gov/vocabulary/relators/prf"/> -->
+               </category>
+               <category xml:id="loc_prg">
+                  <catDesc>
+                     <term>Programmer</term>
+                     <gloss>A person, family, or organization responsible for creating a computer
+                        program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prg" uri="http://id.loc.gov/vocabulary/relators/prg"/> -->
+               </category>
+               <category xml:id="loc_prm">
+                  <catDesc>
+                     <term>Printmaker</term>
+                     <gloss>A person or organization who makes a relief, intaglio, or planographic
+                        printing surface.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prm" uri="http://id.loc.gov/vocabulary/relators/prm"/> -->
+               </category>
+               <category xml:id="loc_prn">
+                  <catDesc>
+                     <term>Production Company</term>
+                     <gloss>An organization that is responsible for financial, technical, and
+                        organizational management of a production for stage, screen, audio
+                        recording, television, webcast, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prn" uri="http://id.loc.gov/vocabulary/relators/prn"/> -->
+               </category>
+               <category xml:id="loc_pro">
+                  <catDesc>
+                     <term>Producer</term>
+                     <gloss>A person, family, or organization responsible for most of the business
+                        aspects of a production for screen, audio recording, television, webcast,
+                        etc. The producer is generally responsible for fund raising, managing the
+                        production, hiring key personnel, arranging for distributors, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pro" uri="http://id.loc.gov/vocabulary/relators/pro"/> -->
+               </category>
+               <category xml:id="loc_prp">
+                  <catDesc>
+                     <term>Production Place</term>
+                     <gloss>The place of production (e.g., inscription, fabrication, construction,
+                        etc.) of a resource in an unpublished form.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prp" uri="http://id.loc.gov/vocabulary/relators/prp"/> -->
+               </category>
+               <category xml:id="loc_prs">
+                  <catDesc>
+                     <term>Production Designer</term>
+                     <gloss>A person or organization responsible for designing the overall visual
+                        appearance of a moving image production.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prs" uri="http://id.loc.gov/vocabulary/relators/prs"/> -->
+               </category>
+               <category xml:id="loc_prt">
+                  <catDesc>
+                     <term>Printer</term>
+                     <gloss>A person, family, or organization involved in manufacturing a
+                        manifestation of printed text, notated music, etc., from type or plates,
+                        such as a book, newspaper, magazine, broadside, score, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prt" uri="http://id.loc.gov/vocabulary/relators/prt"/> -->
+               </category>
+               <category xml:id="loc_prv">
+                  <catDesc>
+                     <term>Provider</term>
+                     <gloss>A person or organization who produces, publishes, manufactures, or
+                        distributes a resource if specific codes are not desired.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="prv" uri="http://id.loc.gov/vocabulary/relators/prv"/> -->
+               </category>
+               <category xml:id="loc_pta">
+                  <catDesc>
+                     <term>Patent Applicant</term>
+                     <gloss>A person or organization that applied for a patent.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pta" uri="http://id.loc.gov/vocabulary/relators/pta"/> -->
+               </category>
+               <category xml:id="loc_pte">
+                  <catDesc>
+                     <term>Plaintiff-appellee</term>
+                     <gloss>A plaintiff against whom an appeal is taken from one court or
+                        jurisdiction to another to reverse the judgment, usually in a legal
+                        proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pte" uri="http://id.loc.gov/vocabulary/relators/pte"/> -->
+               </category>
+               <category xml:id="loc_ptf">
+                  <catDesc>
+                     <term>Plaintiff</term>
+                     <gloss>A person or organization who brings a suit in a civil
+                        proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ptf" uri="http://id.loc.gov/vocabulary/relators/ptf"/> -->
+               </category>
+               <category xml:id="loc_pth">
+                  <catDesc>
+                     <term>Patent Holder</term>
+                     <gloss>A person or organization that was granted the patent referred to by the
+                        item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pth" uri="http://id.loc.gov/vocabulary/relators/pth"/> -->
+               </category>
+               <category xml:id="loc_ptt">
+                  <catDesc>
+                     <term>Plaintiff-appellant</term>
+                     <gloss>A plaintiff who takes an appeal from one court or jurisdiction to
+                        another to reverse the judgment, usually in a legal proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ptt" uri="http://id.loc.gov/vocabulary/relators/ptt"/> -->
+               </category>
+               <category xml:id="loc_pup">
+                  <catDesc>
+                     <term>Publication Place</term>
+                     <gloss>The place where a resource is published.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="pup" uri="http://id.loc.gov/vocabulary/relators/pup"/> -->
+               </category>
+               <category xml:id="loc_rap">
+                  <catDesc>
+                     <term>Rapporteur</term>
+                     <gloss>A person responsible for reporting on the proceedings of meetings of an
+                        organization.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rap" uri="http://id.loc.gov/vocabulary/relators/rap"/> -->
+               </category>
+               <category xml:id="loc_rbr">
+                  <catDesc>
+                     <term>Rubricator</term>
+                     <gloss>A person or organization responsible for parts of a work, often headings
+                        or opening parts of a manuscript, that appear in a distinctive color,
+                        usually red.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rbr" uri="http://id.loc.gov/vocabulary/relators/rbr"/> -->
+               </category>
+               <category xml:id="loc_rcd">
+                  <catDesc>
+                     <term>Recordist</term>
+                     <gloss>A person or organization who uses a recording device to capture sounds
+                        and/or video during a recording session, including field recordings of
+                        natural sounds, folkloric events, music, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rcd" uri="http://id.loc.gov/vocabulary/relators/rcd"/> -->
+               </category>
+               <category xml:id="loc_rce">
+                  <catDesc>
+                     <term>Recording Engineer</term>
+                     <gloss>A person contributing to a resource by supervising the technical aspects
+                        of a sound or video recording session.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rce" uri="http://id.loc.gov/vocabulary/relators/rce"/> -->
+               </category>
+               <category xml:id="loc_rcp">
+                  <catDesc>
+                     <term>Addressee</term>
+                     <gloss>A person, family, or organization to whom the correspondence in a work
+                        is addressed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rcp" uri="http://id.loc.gov/vocabulary/relators/rcp"/> -->
+               </category>
+               <category xml:id="loc_rdd">
+                  <catDesc>
+                     <term>Radio Director</term>
+                     <gloss>A director responsible for the general management and supervision of a
+                        radio program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rdd" uri="http://id.loc.gov/vocabulary/relators/rdd"/> -->
+               </category>
+               <category xml:id="loc_red">
+                  <catDesc>
+                     <term>Redaktor</term>
+                     <gloss>A person or organization who writes or develops the framework for an
+                        item without being intellectually responsible for its content.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="red" uri="http://id.loc.gov/vocabulary/relators/red"/> -->
+               </category>
+               <category xml:id="loc_ren">
+                  <catDesc>
+                     <term>Renderer</term>
+                     <gloss>A person or organization who prepares drawings of architectural designs
+                        (i.e., renderings) in accurate, representational perspective to show what
+                        the project will look like when completed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ren" uri="http://id.loc.gov/vocabulary/relators/ren"/> -->
+               </category>
+               <category xml:id="loc_res">
+                  <catDesc>
+                     <term>Researcher</term>
+                     <gloss>A person or organization responsible for performing research.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="res" uri="http://id.loc.gov/vocabulary/relators/res"/> -->
+               </category>
+               <category xml:id="loc_rev">
+                  <catDesc>
+                     <term>Reviewer</term>
+                     <gloss>A person or organization responsible for the review of a book, motion
+                        picture, performance, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rev" uri="http://id.loc.gov/vocabulary/relators/rev"/> -->
+               </category>
+               <category xml:id="loc_rpc">
+                  <catDesc>
+                     <term>Radio Producer</term>
+                     <gloss>A producer responsible for most of the business aspects of a radio
+                        program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rpc" uri="http://id.loc.gov/vocabulary/relators/rpc"/> -->
+               </category>
+               <category xml:id="loc_rps">
+                  <catDesc>
+                     <term>Repository</term>
+                     <gloss>An organization that hosts data or material culture objects and provides
+                        services to promote long term, consistent and shared use of those data or
+                        objects.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rps" uri="http://id.loc.gov/vocabulary/relators/rps"/> -->
+               </category>
+               <category xml:id="loc_rpt">
+                  <catDesc>
+                     <term>Reporter</term>
+                     <gloss>A person or organization who writes or presents reports of news or
+                        current events on air or in print.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rpt" uri="http://id.loc.gov/vocabulary/relators/rpt"/> -->
+               </category>
+               <category xml:id="loc_rpy">
+                  <catDesc>
+                     <term>Responsible Party</term>
+                     <gloss>A person or organization legally responsible for the content of the
+                        published material.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rpy" uri="http://id.loc.gov/vocabulary/relators/rpy"/> -->
+               </category>
+               <category xml:id="loc_rse">
+                  <catDesc>
+                     <term>Respondent-appellee</term>
+                     <gloss>A respondent against whom an appeal is taken from one court or
+                        jurisdiction to another to reverse the judgment, usually in an equity
+                        proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rse" uri="http://id.loc.gov/vocabulary/relators/rse"/> -->
+               </category>
+               <category xml:id="loc_rsg">
+                  <catDesc>
+                     <term>Restager</term>
+                     <gloss>A person or organization, other than the original choreographer or
+                        director, responsible for restaging a choreographic or dramatic work and who
+                        contributes minimal new content.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rsg" uri="http://id.loc.gov/vocabulary/relators/rsg"/> -->
+               </category>
+               <category xml:id="loc_rsp">
+                  <catDesc>
+                     <term>Respondent</term>
+                     <gloss>A person or organization who makes an answer to the courts pursuant to
+                        an application for redress (usually in an equity proceeding) or a candidate
+                        for a degree who defends or opposes a thesis provided by the praeses in an
+                        academic disputation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rsp" uri="http://id.loc.gov/vocabulary/relators/rsp"/> -->
+               </category>
+               <category xml:id="loc_rsr">
+                  <catDesc>
+                     <term>Restorationist</term>
+                     <gloss>A person, family, or organization responsible for the set of technical,
+                        editorial, and intellectual procedures aimed at compensating for the
+                        degradation of an item by bringing it back to a state as close as possible
+                        to its original condition.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rsr" uri="http://id.loc.gov/vocabulary/relators/rsr"/> -->
+               </category>
+               <category xml:id="loc_rst">
+                  <catDesc>
+                     <term>Respondent-appellant</term>
+                     <gloss>A respondent who takes an appeal from one court or jurisdiction to
+                        another to reverse the judgment, usually in an equity proceeding.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rst" uri="http://id.loc.gov/vocabulary/relators/rst"/> -->
+               </category>
+               <category xml:id="loc_rth">
+                  <catDesc>
+                     <term>Research Team Head</term>
+                     <gloss>A person who directed or managed a research project.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rth" uri="http://id.loc.gov/vocabulary/relators/rth"/> -->
+               </category>
+               <category xml:id="loc_rtm">
+                  <catDesc>
+                     <term>Research Team Member</term>
+                     <gloss>A person who participated in a research project but whose role did not
+                        involve direction or management of it.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rtm" uri="http://id.loc.gov/vocabulary/relators/rtm"/> -->
+               </category>
+               <category xml:id="loc_rxa">
+                  <catDesc>
+                     <term>Remix Artist</term>
+                     <gloss>A person that manipulates, recombines, mixes and reproduces
+                        previously-recorded sounds.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="rxa" uri="http://id.loc.gov/vocabulary/relators/rxa"/> -->
+               </category>
+               <category xml:id="loc_sad">
+                  <catDesc>
+                     <term>Scientific Advisor</term>
+                     <gloss>A person or organization who brings scientific, pedagogical, or
+                        historical competence to the conception and realization on a work,
+                        particularly in the case of audio-visual items.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sad" uri="http://id.loc.gov/vocabulary/relators/sad"/> -->
+               </category>
+               <category xml:id="loc_sce">
+                  <catDesc>
+                     <term>Scenarist</term>
+                     <gloss>A person or organization who is the author of a motion picture
+                        screenplay, generally the person who wrote the scenarios for a motion
+                        picture during the silent era.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sce" uri="http://id.loc.gov/vocabulary/relators/sce"/> -->
+               </category>
+               <category xml:id="loc_scl">
+                  <catDesc>
+                     <term>Sculptor</term>
+                     <gloss>An artist responsible for creating a three-dimensional work by modeling,
+                        carving, or similar technique.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="scl" uri="http://id.loc.gov/vocabulary/relators/scl"/> -->
+               </category>
+               <category xml:id="loc_scr">
+                  <catDesc>
+                     <term>Scribe</term>
+                     <gloss>A person who is an amanuensis and for a writer of manuscripts proper.
+                        For a person who makes pen-facsimiles, use facsimilist.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="scr" uri="http://id.loc.gov/vocabulary/relators/scr"/> -->
+               </category>
+               <category xml:id="loc_sde">
+                  <catDesc>
+                     <term>Sound Engineer</term>
+                     <gloss>A person responsible for recording sound on set during filmmaking or
+                        television production for inclusion in the finished product, or for use by
+                        the sound designer, sound effects editors, or foley artists.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sde" uri="http://id.loc.gov/vocabulary/relators/sde"/> -->
+               </category>
+               <category xml:id="loc_sds">
+                  <catDesc>
+                     <term>Sound Designer</term>
+                     <gloss>A person who produces and reproduces the sound score (both live and
+                        recorded), the installation of microphones, the setting of sound levels, and
+                        the coordination of sources of sound for a production.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sds" uri="http://id.loc.gov/vocabulary/relators/sds"/> -->
+               </category>
+               <category xml:id="loc_sec">
+                  <catDesc>
+                     <term>Secretary</term>
+                     <gloss>A person or organization who is a recorder, redactor, or other person
+                        responsible for expressing the views of an organization.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sec" uri="http://id.loc.gov/vocabulary/relators/sec"/> -->
+               </category>
+               <category xml:id="loc_sfx">
+                  <catDesc>
+                     <term>Special Effects Provider</term>
+                     <gloss>A person or organization responsible for the activities of workers
+                        engaged in designing and creating on-set special effects appearing in a
+                        moving image or sound recording, such as on-set mechanical effects and
+                        in-camera option effects.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sfx" uri="http://id.loc.gov/vocabulary/relators/sfx"/> -->
+               </category>
+               <category xml:id="loc_sgd">
+                  <catDesc>
+                     <term>Stage Director</term>
+                     <gloss>A person or organization contributing to a stage resource through the
+                        overall management and supervision of a performance.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sgd" uri="http://id.loc.gov/vocabulary/relators/sgd"/> -->
+               </category>
+               <category xml:id="loc_sgn">
+                  <catDesc>
+                     <term>Signer</term>
+                     <gloss>A person whose signature appears without a presentation or other
+                        statement indicative of provenance. When there is a presentation statement,
+                        use inscriber.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sgn" uri="http://id.loc.gov/vocabulary/relators/sgn"/> -->
+               </category>
+               <category xml:id="loc_sht">
+                  <catDesc>
+                     <term>Supporting Host</term>
+                     <gloss>A person or organization that supports (by allocating facilities, staff,
+                        or other resources) a project, program, meeting, event, data objects,
+                        material culture objects, or other entities capable of support.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sht" uri="http://id.loc.gov/vocabulary/relators/sht"/> -->
+               </category>
+               <category xml:id="loc_sll">
+                  <catDesc>
+                     <term>Seller</term>
+                     <gloss>A former owner of an item who sold that item to another owner.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sll" uri="http://id.loc.gov/vocabulary/relators/sll"/> -->
+               </category>
+               <category xml:id="loc_sng">
+                  <catDesc>
+                     <term>Singer</term>
+                     <gloss>A performer contributing to a resource by using his/her/their voice,
+                        with or without instrumental accompaniment, to produce music. A singer's
+                        performance may or may not include actual words.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="sng" uri="http://id.loc.gov/vocabulary/relators/sng"/> -->
+               </category>
+               <category xml:id="loc_spk">
+                  <catDesc>
+                     <term>Speaker</term>
+                     <gloss>A performer contributing to a resource by speaking words, such as a
+                        lecture, speech, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="spk" uri="http://id.loc.gov/vocabulary/relators/spk"/> -->
+               </category>
+               <category xml:id="loc_spn">
+                  <catDesc>
+                     <term>Sponsor</term>
+                     <gloss>A person, family, or organization sponsoring some aspect of a resource,
+                        e.g., funding research, sponsoring an event.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="spn" uri="http://id.loc.gov/vocabulary/relators/spn"/> -->
+               </category>
+               <category xml:id="loc_spy">
+                  <catDesc>
+                     <term>Second Party</term>
+                     <gloss>A person or organization who is identified as the party of the second
+                        part. In the case of transfer of right, this is the assignee, transferee,
+                        licensee, grantee, etc. Multiple parties can be named jointly as the second
+                        party.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="spy" uri="http://id.loc.gov/vocabulary/relators/spy"/> -->
+               </category>
+               <category xml:id="loc_srv">
+                  <catDesc>
+                     <term>Surveyor</term>
+                     <gloss>A person, family, or organization contributing to a cartographic
+                        resource by providing measurements or dimensional relationships for the
+                        geographic area represented.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="srv" uri="http://id.loc.gov/vocabulary/relators/srv"/> -->
+               </category>
+               <category xml:id="loc_std">
+                  <catDesc>
+                     <term>Set Designer</term>
+                     <gloss>A person who translates the rough sketches of the art director into
+                        actual architectural structures for a theatrical presentatio.n,
+                        entertainment, motion picture, etc. Set designers draw the detailed guides
+                        and specifications for building the set.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="std" uri="http://id.loc.gov/vocabulary/relators/std"/> -->
+               </category>
+               <category xml:id="loc_stg">
+                  <catDesc>
+                     <term>Setting</term>
+                     <gloss>An entity in which the activity or plot of a work takes place, e.g. a
+                        geographic place, a time period, a building, an event.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="stg" uri="http://id.loc.gov/vocabulary/relators/stg"/> -->
+               </category>
+               <category xml:id="loc_stl">
+                  <catDesc>
+                     <term>Storyteller</term>
+                     <gloss>A performer contributing to a resource by relaying a creator's original
+                        story with dramatic or theatrical interpretation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="stl" uri="http://id.loc.gov/vocabulary/relators/stl"/> -->
+               </category>
+               <category xml:id="loc_stm">
+                  <catDesc>
+                     <term>Stage Manager</term>
+                     <gloss>A person who is in charge of everything that occurs on a performance
+                        stage, and who acts as chief of all crews and assistant to a director during
+                        rehearsals.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="stm" uri="http://id.loc.gov/vocabulary/relators/stm"/> -->
+               </category>
+               <category xml:id="loc_stn">
+                  <catDesc>
+                     <term>Standards Body</term>
+                     <gloss>An organization responsible for the development or enforcement of a
+                        standard.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="stn" uri="http://id.loc.gov/vocabulary/relators/stn"/> -->
+               </category>
+               <category xml:id="loc_str">
+                  <catDesc>
+                     <term>Stereotyper</term>
+                     <gloss>A person or organization who creates a new plate for printing by molding
+                        or copying another printing surface.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="str" uri="http://id.loc.gov/vocabulary/relators/str"/> -->
+               </category>
+               <category xml:id="loc_swd">
+                  <catDesc>
+                     <term>Software Developer</term>
+                     <gloss>A person who researches, designs, implements or tests software.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="swd" uri="http://id.loc.gov/vocabulary/relators/swd"/> -->
+               </category>
+               <category xml:id="loc_tad">
+                  <catDesc>
+                     <term>Technical Advisor</term>
+                     <gloss>A person with expertise in a particular field who advises on the
+                        convincing portrayal of a subject to add authenticity to a work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tad" uri="http://id.loc.gov/vocabulary/relators/tad"/> -->
+               </category>
+               <category xml:id="loc_tau">
+                  <catDesc>
+                     <term>Television Writer</term>
+                     <gloss>A person contributing to a television resource by writing or
+                        collaborating with a group of writers on a script for a television program,
+                        such as an episode of a television series.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tau" uri="http://id.loc.gov/vocabulary/relators/tau"/> -->
+               </category>
+               <category xml:id="loc_tcd">
+                  <catDesc>
+                     <term>Technical Director</term>
+                     <gloss>A person who is ultimately in charge of scenery, props, lights and sound
+                        for a production.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tcd" uri="http://id.loc.gov/vocabulary/relators/tcd"/> -->
+               </category>
+               <category xml:id="loc_tch">
+                  <catDesc>
+                     <term>Teacher</term>
+                     <gloss>A performer contributing to a resource by giving instruction or
+                        providing a demonstration.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tch" uri="http://id.loc.gov/vocabulary/relators/tch"/> -->
+               </category>
+               <category xml:id="loc_ths">
+                  <catDesc>
+                     <term>Thesis Advisor</term>
+                     <gloss>A person under whose supervision a degree candidate develops and
+                        presents a thesis, mémoire, or text of a dissertation.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="ths" uri="http://id.loc.gov/vocabulary/relators/ths"/> -->
+               </category>
+               <category xml:id="loc_tld">
+                  <catDesc>
+                     <term>Television Director</term>
+                     <gloss>A director responsible for the general management and supervision of a
+                        television program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tld" uri="http://id.loc.gov/vocabulary/relators/tld"/> -->
+               </category>
+               <category xml:id="loc_tlg">
+                  <catDesc>
+                     <term>Television Guest</term>
+                     <gloss>A person invited to appear in a television program, often a television
+                        talk or variety show. Guests normally appear as themselves or as characters
+                        in skits.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tlg" uri="http://id.loc.gov/vocabulary/relators/tlg"/> -->
+               </category>
+               <category xml:id="loc_tlh">
+                  <catDesc>
+                     <term>Television Host</term>
+                     <gloss>A person contributing to a television resource by leading a program that
+                        includes other guest, performers, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tlh" uri="http://id.loc.gov/vocabulary/relators/tlh"/> -->
+               </category>
+               <category xml:id="loc_tlp">
+                  <catDesc>
+                     <term>Television Producer</term>
+                     <gloss>A producer responsible for most of the business aspects of a television
+                        program.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tlp" uri="http://id.loc.gov/vocabulary/relators/tlp"/> -->
+               </category>
+               <category xml:id="loc_trc">
+                  <catDesc>
+                     <term>Transcriber</term>
+                     <gloss>A person, family, or organization contributing to a resource by changing
+                        it from one system of notation to another. For a work transcribed for a
+                        different instrument or performing group, see arranger [arr]. For makers of
+                        pen-facsimiles, use facsimilist.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="trc" uri="http://id.loc.gov/vocabulary/relators/trc"/> -->
+               </category>
+               <category xml:id="loc_trl">
+                  <catDesc>
+                     <term>Translator</term>
+                     <gloss>A person or organization who renders a text from one language into
+                        another, or from an older form of a language into the modern form.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="trl" uri="http://id.loc.gov/vocabulary/relators/trl"/> -->
+               </category>
+               <category xml:id="loc_tyd">
+                  <catDesc>
+                     <term>Type Designer</term>
+                     <gloss>A person or organization who designs the type face used in a particular
+                        item.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tyd" uri="http://id.loc.gov/vocabulary/relators/tyd"/> -->
+               </category>
+               <category xml:id="loc_tyg">
+                  <catDesc>
+                     <term>Typographer</term>
+                     <gloss>A person or organization primarily responsible for choice and
+                        arrangement of type used in an item. If the typographer is also responsible
+                        for other aspects of the graphic design of a book (e.g., Book designer
+                        [bkd]), codes for both functions may be needed.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="tyg" uri="http://id.loc.gov/vocabulary/relators/tyg"/> -->
+               </category>
+               <category xml:id="loc_uvp">
+                  <catDesc>
+                     <term>University Place</term>
+                     <gloss>A place where a university that is associated with a resource is
+                        located, for example, a university where an academic dissertation or thesis
+                        was presented.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="uvp" uri="http://id.loc.gov/vocabulary/relators/uvp"/> -->
+               </category>
+               <category xml:id="loc_vac">
+                  <catDesc>
+                     <term>Voice Actor</term>
+                     <gloss>An actor contributing to a resource by providing the voice for
+                        characters in radio and audio productions and for animated characters in
+                        moving image works, as well as by providing voice overs in radio and
+                        television commercials, dubbed resources, etc.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="vac" uri="http://id.loc.gov/vocabulary/relators/vac"/> -->
+               </category>
+               <category xml:id="loc_vdg">
+                  <catDesc>
+                     <term>Videographer</term>
+                     <gloss>A person in charge of a video production, e.g. the video recording of a
+                        stage production as opposed to a commercial motion picture. The videographer
+                        may be the video camera operator or may supervise one or more video camera
+                        operators.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="vdg" uri="http://id.loc.gov/vocabulary/relators/vdg"/> -->
+               </category>
+               <category xml:id="loc_vfx">
+                  <catDesc>
+                     <term>Visual Effects Provider</term>
+                     <gloss>A person or organization responsible for the activities of workers
+                        engaged in designing and creating post-production visual effects appearing
+                        in a moving image.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="vfx" uri="http://id.loc.gov/vocabulary/relators/vfx"/> -->
+               </category>
+               <category xml:id="loc_voc">
+                  <catDesc>
+                     <term>Vocalist</term>
+                  </catDesc>
+                  <!-- <equiv name="voc" uri="http://id.loc.gov/vocabulary/relators/voc"/> -->
+               </category>
+               <category xml:id="loc_wac">
+                  <catDesc>
+                     <term>Writer of Added Commentary</term>
+                     <gloss>A person, family, or organization contributing to an expression of a
+                        work by providing an interpretation or critical explanation of the original
+                        work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wac" uri="http://id.loc.gov/vocabulary/relators/wac"/> -->
+               </category>
+               <category xml:id="loc_wal">
+                  <catDesc>
+                     <term>Writer of Added Lyrics</term>
+                     <gloss>A writer of words added to an expression of a musical work. For lyric
+                        writing in collaboration with a composer to form an original work, see
+                        lyricist.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wal" uri="http://id.loc.gov/vocabulary/relators/wal"/> -->
+               </category>
+               <category xml:id="loc_wam">
+                  <catDesc>
+                     <term>Writer of Accompanying Material</term>
+                     <gloss>A person or organization who writes significant material which
+                        accompanies a sound recording or other audiovisual material.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wam" uri="http://id.loc.gov/vocabulary/relators/wam"/> -->
+               </category>
+               <category xml:id="loc_wat">
+                  <catDesc>
+                     <term>Writer of Added Text</term>
+                     <gloss>A person, family, or organization contributing to a non-textual resource
+                        by providing text for the non-textual work (e.g., writing captions for
+                        photographs, descriptions of maps)</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wat" uri="http://id.loc.gov/vocabulary/relators/wat"/> -->
+               </category>
+               <category xml:id="loc_wdc">
+                  <catDesc>
+                     <term>Woodcutter</term>
+                     <gloss>A person or organization who makes prints by cutting the image in relief
+                        on the plank side of a wood block.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wdc" uri="http://id.loc.gov/vocabulary/relators/wdc"/> -->
+               </category>
+               <category xml:id="loc_wde">
+                  <catDesc>
+                     <term>Wood Engraver</term>
+                     <gloss>A person or organization who makes prints by cutting the image in relief
+                        on the end-grain of a wood block.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wde" uri="http://id.loc.gov/vocabulary/relators/wde"/> -->
+               </category>
+               <category xml:id="loc_wfs">
+                  <catDesc>
+                     <term>Writer of Film Story</term>
+                     <gloss>A person contributing to a motion picture resource by writing an
+                        original story expressly for the resource, not based on any other existing
+                        work. For the author of a screenplay, use screenwriter. For a person who
+                        adapts novels or stories for the screen, use adapter.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wfs" uri="http://id.loc.gov/vocabulary/relators/wfs"/> -->
+               </category>
+               <category xml:id="loc_wft">
+                  <catDesc>
+                     <term>Writer of Intertitles</term>
+                     <gloss>A person contributing to a motion picture resource by writing dialogue
+                        or expository intertitles inserted intermittently between sequences of the
+                        film. Generally, the person who wrote the intertitles for a motion picture
+                        during the silent era.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wft" uri="http://id.loc.gov/vocabulary/relators/wft"/> -->
+               </category>
+               <category xml:id="loc_win">
+                  <catDesc>
+                     <term>Writer of Introduction</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        providing an introduction to the original work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="win" uri="http://id.loc.gov/vocabulary/relators/win"/> -->
+               </category>
+               <category xml:id="loc_wit">
+                  <catDesc>
+                     <term>Witness</term>
+                     <gloss>Use for a person who verifies the truthfulness of an event or
+                        action.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wit" uri="http://id.loc.gov/vocabulary/relators/wit"/> -->
+               </category>
+               <category xml:id="loc_wpr">
+                  <catDesc>
+                     <term>Writer of Preface</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        providing a preface to the original work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wpr" uri="http://id.loc.gov/vocabulary/relators/wpr"/> -->
+               </category>
+               <category xml:id="loc_wst">
+                  <catDesc>
+                     <term>Writer of Supplementary Textual Content</term>
+                     <gloss>A person, family, or organization contributing to a resource by
+                        providing supplementary textual content (e.g., an introduction, a preface)
+                        to the original work.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wst" uri="http://id.loc.gov/vocabulary/relators/wst"/> -->
+               </category>
+               <category xml:id="loc_wts">
+                  <catDesc>
+                     <term>Writer of Television Story</term>
+                     <gloss>A person contributing to a television resource by writing an original
+                        story expressly for the resource, not based on any other existing work. For
+                        a person who writes a script for a television program, use television
+                        writer. For a person who adapts novels or stories for television, use
+                        adapter.</gloss>
+                  </catDesc>
+                  <!-- <equiv name="wts" uri="http://id.loc.gov/vocabulary/relators/wts"/> -->
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p/>
+      </body>
+   </text>
+</TEI>
