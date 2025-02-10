@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:math="http://www.w3.org/1998/Math/MathML"
-  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
   xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -19,6 +17,36 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
+      <classDecl>
+        <taxonomy xml:id="ATN_DocType" n="atn">
+          <category xml:id="atn_BornDigital">
+            <catDesc>
+              <term>Born Digital</term>
+              <gloss>A <soCalled>born digital</soCalled> document (e.g. not a primary
+                source)</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="atn_PrimarySource">
+            <catDesc>
+              <term>Primary Source</term>
+              <gloss>A primary source document</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="atn_Database">
+            <catDesc>
+              <term>Database</term>
+              <gloss>A database or database-like page (e.g. bibliography, orgography, et
+                cetera)</gloss>
+            </catDesc>
+          </category>
+          <category xml:id="atn_Boilerplate">
+            <catDesc>
+              <term>Boilerplate</term>
+              <gloss>A boilerplate page, which would be excluded from rendering</gloss>
+            </catDesc>
+          </category>
+        </taxonomy>
+      </classDecl>
       <tagsDecl xml:id="ATN_renditions" n="rnd"
         source="https://github.com/TEIC/TEI/blob/dev/P5/Exemplars/tei_simplePrint.odd">
         <rendition xml:id="allcaps">text-transform: uppercase;</rendition>
@@ -70,12 +98,15 @@
       </tagsDecl>
     </encodingDesc>
   </teiHeader>
+
   <text>
     <body>
       <head>The Adaptive Text Network Schema and Guidelines</head>
       <div>
         <head>Introduction</head>
-        <p>This is the work-in-progress schema and guidelines for the Adaptive Text Network project at the University of British Columbia, in partnership with Digital Scholarship in the Arts (UBC) and the Digital Humanities Innovation Lab (SFU).</p>
+        <p>This is the work-in-progress schema and guidelines for the Adaptive Text Network project
+          at the University of British Columbia, in partnership with Digital Scholarship in the Arts
+          (UBC) and the Digital Humanities Innovation Lab (SFU).</p>
         <p>At the moment, this is a very permissive schema, but will be adjusted as necessary.</p>
       </div>
     </body>
@@ -93,6 +124,65 @@
         <moduleRef key="drama"/>
         <moduleRef key="figures"/>
         <moduleRef key="header"/>
+        <elementSpec ident="teiHeader" module="header" mode="change">
+          <!--Update the teiHeader content model to make profileDesc mandatory-->
+          <content>
+            <sequence>
+              <elementRef key="fileDesc"/>
+              <sequence preserveOrder="false">
+                <elementRef key="encodingDesc" minOccurs="0" maxOccurs="1"/>
+                <elementRef key="profileDesc"/>
+                <elementRef key="xenoData" minOccurs="0" maxOccurs="1"/>
+              </sequence>
+              <elementRef key="revisionDesc" minOccurs="0"/>
+            </sequence>
+          </content>
+        </elementSpec>
+        <elementSpec ident="profileDesc" module="header" mode="change">
+          <content>
+            <sequence preserveOrder="false">
+              <elementRef key="textClass"/>
+              <classRef key="model.profileDescPart" except="textClass" minOccurs="0"
+                maxOccurs="unbounded"/>
+            </sequence>
+          </content>
+        </elementSpec>
+        <elementSpec ident="textClass" module="header" mode="change">
+          <content>
+            <sequence preserveOrder="false">
+              <elementRef key="classCode" minOccurs="0" maxOccurs="unbounded"/>
+              <elementRef key="catRef" minOccurs="1" maxOccurs="unbounded"/>
+              <elementRef key="keywords" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </content>
+        </elementSpec>
+        <elementSpec ident="catRef" mode="change">
+          <constraintSpec mode="add" ident="catRef.mustHaveScheme" scheme="schematron">
+            <constraint>
+              <sch:rule context="tei:textClass">
+                <sch:assert test="tei:catRef[@scheme = 'atn:DocType']">ERROR: All documents must
+                  have one ATN document type (e.g. a catRef with a
+                  scheme='atn:DocTypes']</sch:assert>
+                <sch:assert test="tei:catRef[@scheme = 'atn:DocType'][contains(@target, 'atn:')]"
+                  >ERROR: atn:DocType categorizations must use one of the ATN document
+                  types.</sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+          <attList>
+            <attDef ident="scheme" mode="change">
+              <valList mode="add" type="semi">
+                <valItem ident="atn:DocType">
+                  <gloss>ATN Document Type</gloss>
+                  <desc>Overall document type category for the ATN Schema</desc>
+                </valItem>
+              </valList>
+            </attDef>
+            <attDef ident="target" mode="change">
+              <valList mode="add" type="semi" source="#ATN_DocType"/>
+            </attDef>
+          </attList>
+        </elementSpec>
         <moduleRef key="gaiji"/>
         <moduleRef key="linking" include="standOff"/>
         <moduleRef key="namesdates"/>
@@ -105,23 +195,30 @@
             <constraint>
               <sch:rule context="tei:TEI">
                 <sch:let name="basename" value="tokenize(document-uri(/),'[/\.]')[last() - 1]"/>
-                <sch:assert test="@xml:id">ERROR: All TEI elements must have an @xml:id</sch:assert>
-                <sch:assert test="@xml:id = $basename">ERROR: The root @xml:id should be the
-                same as the file name (<sch:value-of select="$basename"/>)</sch:assert>
+                <sch:assert test="@xml:id = $basename">ERROR: The root @xml:id should be the same as
+                  the file name (<sch:value-of select="$basename"/>)</sch:assert>
               </sch:rule>
             </constraint>
           </constraintSpec>
+          <attList>
+            <attDef ident="xml:id" mode="change" usage="req"/>
+          </attList>
         </elementSpec>
-        
-        <classSpec  ident="att.global.rendition" mode="change" module="core" type="atts">
+        <classSpec ident="att.global" mode="change" type="atts">
+          <attList>
+            <attDef ident="xml:base" mode="delete"/>
+            <attDef ident="xml:space" mode="delete"/>
+          </attList>
+        </classSpec>
+        <classSpec ident="att.global.rendition" mode="change" module="core" type="atts">
           <attList>
             <attDef ident="rendition" mode="change">
               <constraintSpec ident="rendition.onlyInText" scheme="schematron">
                 <constraint>
                   <sch:rule context="tei:*[@rendition]">
                     <sch:assert test="ancestor::tei:text">ERROR: @rendition not allowed here.
-                      @rendition should only be supplied on elements in primary source text
-                      contexts (i.e. within the text element).</sch:assert>
+                      @rendition should only be supplied on elements in primary source text contexts
+                      (i.e. within the text element).</sch:assert>
                   </sch:rule>
                 </constraint>
               </constraintSpec>
@@ -129,6 +226,411 @@
             </attDef>
           </attList>
         </classSpec>
+        <dataSpec ident="teidata.language" mode="change">
+          <content>
+            <alternate>
+              <dataRef name="language"/>
+              <valList type="semi">
+                <valItem ident="af" mode="add">
+                  <desc>Afrikaans</desc>
+                </valItem>
+                <valItem ident="am" mode="add">
+                  <desc>Amharic</desc>
+                </valItem>
+                <valItem ident="ar" mode="add">
+                  <desc>Arabic</desc>
+                </valItem>
+                <valItem ident="arn" mode="add">
+                  <desc>Mapudungun</desc>
+                </valItem>
+                <valItem ident="ary" mode="add">
+                  <desc>Moroccan Arabic</desc>
+                </valItem>
+                <valItem ident="as" mode="add">
+                  <desc>Assamese</desc>
+                </valItem>
+                <valItem ident="az" mode="add">
+                  <desc>Azerbaijani</desc>
+                </valItem>
+                <valItem ident="ba" mode="add">
+                  <desc>Bashkir</desc>
+                </valItem>
+                <valItem ident="be" mode="add">
+                  <desc>Belarusian</desc>
+                </valItem>
+                <valItem ident="bg" mode="add">
+                  <desc>Bulgarian</desc>
+                </valItem>
+                <valItem ident="bn" mode="add">
+                  <desc>Bengali</desc>
+                </valItem>
+                <valItem ident="bo" mode="add">
+                  <desc>Tibetan</desc>
+                </valItem>
+                <valItem ident="br" mode="add">
+                  <desc>Breton</desc>
+                </valItem>
+                <valItem ident="bs" mode="add">
+                  <desc>Bosnian</desc>
+                </valItem>
+                <valItem ident="ca" mode="add">
+                  <desc>Catalan</desc>
+                </valItem>
+                <valItem ident="ckb" mode="add">
+                  <desc>Central Kurdish</desc>
+                </valItem>
+                <valItem ident="co" mode="add">
+                  <desc>Corsican</desc>
+                </valItem>
+                <valItem ident="cs" mode="add">
+                  <desc>Czech</desc>
+                </valItem>
+                <valItem ident="cy" mode="add">
+                  <desc>Welsh</desc>
+                </valItem>
+                <valItem ident="da" mode="add">
+                  <desc>Danish</desc>
+                </valItem>
+                <valItem ident="de" mode="add">
+                  <desc>German</desc>
+                </valItem>
+                <valItem ident="dsb" mode="add">
+                  <desc>Lower Sorbian</desc>
+                </valItem>
+                <valItem ident="dv" mode="add">
+                  <desc>Divehi</desc>
+                </valItem>
+                <valItem ident="el" mode="add">
+                  <desc>Modern Greek</desc>
+                </valItem>
+                <valItem ident="grc" mode="add">
+                  <desc>Ancient Greek</desc>
+                </valItem>
+                <valItem ident="en" mode="add">
+                  <desc>English</desc>
+                </valItem>
+                <valItem ident="es" mode="add">
+                  <desc>Spanish</desc>
+                </valItem>
+                <valItem ident="et" mode="add">
+                  <desc>Estonian</desc>
+                </valItem>
+                <valItem ident="eu" mode="add">
+                  <desc>Basque</desc>
+                </valItem>
+                <valItem ident="fa" mode="add">
+                  <desc>Persian</desc>
+                </valItem>
+                <valItem ident="fi" mode="add">
+                  <desc>Finnish</desc>
+                </valItem>
+                <valItem ident="fil" mode="add">
+                  <desc>Filipino</desc>
+                </valItem>
+                <valItem ident="fo" mode="add">
+                  <desc>Faroese</desc>
+                </valItem>
+                <valItem ident="fr" mode="add">
+                  <desc>French</desc>
+                </valItem>
+                <valItem ident="fy" mode="add">
+                  <desc>Frisian</desc>
+                </valItem>
+                <valItem ident="ga" mode="add">
+                  <desc>Irish</desc>
+                </valItem>
+                <valItem ident="gd" mode="add">
+                  <desc>Scottish Gaelic</desc>
+                </valItem>
+                <valItem ident="gil" mode="add">
+                  <desc>Gilbertese</desc>
+                </valItem>
+                <valItem ident="gl" mode="add">
+                  <desc>Galician</desc>
+                </valItem>
+                <valItem ident="gsw" mode="add">
+                  <desc>Swiss German</desc>
+                </valItem>
+                <valItem ident="gu" mode="add">
+                  <desc>Gujarati</desc>
+                </valItem>
+                <valItem ident="ha" mode="add">
+                  <desc>Hausa</desc>
+                </valItem>
+                <valItem ident="he" mode="add">
+                  <desc>Hebrew</desc>
+                </valItem>
+                <valItem ident="hi" mode="add">
+                  <desc>Hindi</desc>
+                </valItem>
+                <valItem ident="hr" mode="add">
+                  <desc>Croatian</desc>
+                </valItem>
+                <valItem ident="hsb" mode="add">
+                  <desc>Upper Sorbian</desc>
+                </valItem>
+                <valItem ident="hu" mode="add">
+                  <desc>Hungarian</desc>
+                </valItem>
+                <valItem ident="hy" mode="add">
+                  <desc>Armenian</desc>
+                </valItem>
+                <valItem ident="id" mode="add">
+                  <desc>Indonesian</desc>
+                </valItem>
+                <valItem ident="ig" mode="add">
+                  <desc>Igbo</desc>
+                </valItem>
+                <valItem ident="ii" mode="add">
+                  <desc>Yi</desc>
+                </valItem>
+                <valItem ident="is" mode="add">
+                  <desc>Icelandic</desc>
+                </valItem>
+                <valItem ident="it" mode="add">
+                  <desc>Italian</desc>
+                </valItem>
+                <valItem ident="iu" mode="add">
+                  <desc>Inuktitut</desc>
+                </valItem>
+                <valItem ident="ja" mode="add">
+                  <desc>Japanese</desc>
+                </valItem>
+                <valItem ident="ka" mode="add">
+                  <desc>Georgian</desc>
+                </valItem>
+                <valItem ident="kk" mode="add">
+                  <desc>Kazakh</desc>
+                </valItem>
+                <valItem ident="kl" mode="add">
+                  <desc>Greenlandic</desc>
+                </valItem>
+                <valItem ident="km" mode="add">
+                  <desc>Khmer</desc>
+                </valItem>
+                <valItem ident="kn" mode="add">
+                  <desc>Kannada</desc>
+                </valItem>
+                <valItem ident="ko" mode="add">
+                  <desc>Korean</desc>
+                </valItem>
+                <valItem ident="kok" mode="add">
+                  <desc>Konkani</desc>
+                </valItem>
+                <valItem ident="ku" mode="add">
+                  <desc>Kurdish</desc>
+                </valItem>
+                <valItem ident="ky" mode="add">
+                  <desc>Kyrgyz</desc>
+                </valItem>
+                <valItem ident="lb" mode="add">
+                  <desc>Luxembourgish</desc>
+                </valItem>
+                <valItem ident="lo" mode="add">
+                  <desc>Lao</desc>
+                </valItem>
+                <valItem ident="lt" mode="add">
+                  <desc>Lithuanian</desc>
+                </valItem>
+                <valItem ident="lv" mode="add">
+                  <desc>Latvian</desc>
+                </valItem>
+                <valItem ident="mi" mode="add">
+                  <desc>Maori</desc>
+                </valItem>
+                <valItem ident="mk" mode="add">
+                  <desc>Macedonian</desc>
+                </valItem>
+                <valItem ident="ml" mode="add">
+                  <desc>Malayalam</desc>
+                </valItem>
+                <valItem ident="mn" mode="add">
+                  <desc>Mongolian</desc>
+                </valItem>
+                <valItem ident="moh" mode="add">
+                  <desc>Mohawk</desc>
+                </valItem>
+                <valItem ident="mr" mode="add">
+                  <desc>Marathi</desc>
+                </valItem>
+                <valItem ident="ms" mode="add">
+                  <desc>Malay</desc>
+                </valItem>
+                <valItem ident="mt" mode="add">
+                  <desc>Maltese</desc>
+                </valItem>
+                <valItem ident="my" mode="add">
+                  <desc>Burmese</desc>
+                </valItem>
+                <valItem ident="nb" mode="add">
+                  <desc>Norwegian (Bokmål)</desc>
+                </valItem>
+                <valItem ident="ne" mode="add">
+                  <desc>Nepali</desc>
+                </valItem>
+                <valItem ident="nl" mode="add">
+                  <desc>Dutch</desc>
+                </valItem>
+                <valItem ident="nn" mode="add">
+                  <desc>Norwegian (Nynorsk)</desc>
+                </valItem>
+                <valItem ident="no" mode="add">
+                  <desc>Norwegian</desc>
+                </valItem>
+                <valItem ident="oc" mode="add">
+                  <desc>Occitan</desc>
+                </valItem>
+                <valItem ident="or" mode="add">
+                  <desc>Odia</desc>
+                </valItem>
+                <valItem ident="pap" mode="add">
+                  <desc>Papiamento</desc>
+                </valItem>
+                <valItem ident="pa" mode="add">
+                  <desc>Punjabi</desc>
+                </valItem>
+                <valItem ident="pl" mode="add">
+                  <desc>Polish</desc>
+                </valItem>
+                <valItem ident="prs" mode="add">
+                  <desc>Dari</desc>
+                </valItem>
+                <valItem ident="ps" mode="add">
+                  <desc>Pashto</desc>
+                </valItem>
+                <valItem ident="pt" mode="add">
+                  <desc>Portuguese</desc>
+                </valItem>
+                <valItem ident="quc" mode="add">
+                  <desc>K'iche</desc>
+                </valItem>
+                <valItem ident="qu" mode="add">
+                  <desc>Quechua</desc>
+                </valItem>
+                <valItem ident="rm" mode="add">
+                  <desc>Romansh</desc>
+                </valItem>
+                <valItem ident="ro" mode="add">
+                  <desc>Romanian</desc>
+                </valItem>
+                <valItem ident="ru" mode="add">
+                  <desc>Russian</desc>
+                </valItem>
+                <valItem ident="rw" mode="add">
+                  <desc>Kinyarwanda</desc>
+                </valItem>
+                <valItem ident="sa" mode="add">
+                  <desc>Sanskrit</desc>
+                </valItem>
+                <valItem ident="sah" mode="add">
+                  <desc>Yakut</desc>
+                </valItem>
+                <valItem ident="se" mode="add">
+                  <desc>Sami (Northern)</desc>
+                </valItem>
+                <valItem ident="si" mode="add">
+                  <desc>Sinhala</desc>
+                </valItem>
+                <valItem ident="sk" mode="add">
+                  <desc>Slovak</desc>
+                </valItem>
+                <valItem ident="sl" mode="add">
+                  <desc>Slovenian</desc>
+                </valItem>
+                <valItem ident="sma" mode="add">
+                  <desc>Sami (Southern)</desc>
+                </valItem>
+                <valItem ident="smj" mode="add">
+                  <desc>Sami (Lule)</desc>
+                </valItem>
+                <valItem ident="smn" mode="add">
+                  <desc>Sami (Inari)</desc>
+                </valItem>
+                <valItem ident="sms" mode="add">
+                  <desc>Sami (Skolt)</desc>
+                </valItem>
+                <valItem ident="sq" mode="add">
+                  <desc>Albanian</desc>
+                </valItem>
+                <valItem ident="sr" mode="add">
+                  <desc>Serbian</desc>
+                </valItem>
+                <valItem ident="st" mode="add">
+                  <desc>Sesotho</desc>
+                </valItem>
+                <valItem ident="sv" mode="add">
+                  <desc>Swedish</desc>
+                </valItem>
+                <valItem ident="sw" mode="add">
+                  <desc>Kiswahili</desc>
+                </valItem>
+                <valItem ident="syc" mode="add">
+                  <desc>Syriac</desc>
+                </valItem>
+                <valItem ident="ta" mode="add">
+                  <desc>Tamil</desc>
+                </valItem>
+                <valItem ident="te" mode="add">
+                  <desc>Telugu</desc>
+                </valItem>
+                <valItem ident="tg" mode="add">
+                  <desc>Tajik</desc>
+                </valItem>
+                <valItem ident="th" mode="add">
+                  <desc>Thai</desc>
+                </valItem>
+                <valItem ident="tk" mode="add">
+                  <desc>Turkmen</desc>
+                </valItem>
+                <valItem ident="tn" mode="add">
+                  <desc>Tswana</desc>
+                </valItem>
+                <valItem ident="tr" mode="add">
+                  <desc>Turkish</desc>
+                </valItem>
+                <valItem ident="tt" mode="add">
+                  <desc>Tatar</desc>
+                </valItem>
+                <valItem ident="tzm" mode="add">
+                  <desc>Tamazight</desc>
+                </valItem>
+                <valItem ident="ug" mode="add">
+                  <desc>Uyghur</desc>
+                </valItem>
+                <valItem ident="uk" mode="add">
+                  <desc>Ukrainian</desc>
+                </valItem>
+                <valItem ident="ur" mode="add">
+                  <desc>Urdu</desc>
+                </valItem>
+                <valItem ident="uz" mode="add">
+                  <desc>Uzbek</desc>
+                </valItem>
+                <valItem ident="vi" mode="add">
+                  <desc>Vietnamese</desc>
+                </valItem>
+                <valItem ident="wo" mode="add">
+                  <desc>Wolof</desc>
+                </valItem>
+                <valItem ident="xh" mode="add">
+                  <desc>Xhosa</desc>
+                </valItem>
+                <valItem ident="yo" mode="add">
+                  <desc>Yoruba</desc>
+                </valItem>
+                <valItem ident="zh" mode="add">
+                  <desc>Chinese</desc>
+                </valItem>
+                <valItem ident="zu" mode="add">
+                  <desc>Zulu</desc>
+                </valItem>
+                <valItem ident="la" mode="add">
+                  <desc>Latin</desc>
+                </valItem>
+              </valList>
+            </alternate>
+          </content>
+        </dataSpec>
       </schemaSpec>
     </back>
   </text>

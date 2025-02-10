@@ -69,7 +69,6 @@
     </xsl:template>
     
     <xsl:template match="catDesc/gloss" mode="valList">
-        <xsl:message>ALKSJFKLAJSFLKJASF</xsl:message>
         <desc>
             <xsl:apply-templates mode="#current"/>
         </desc>
