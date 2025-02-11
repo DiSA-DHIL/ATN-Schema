@@ -7,6 +7,7 @@
       <titleStmt>
         <title>Guidelines and Schema for the Adaptive Text Network</title>
         <author>The Adaptive Text Network</author>
+        
       </titleStmt>
       <publicationStmt>
         <publisher>Digital Scholarship in the Arts, University of British Columbia</publisher>
@@ -17,6 +18,17 @@
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
+      <listPrefixDef>
+        <prefixDef ident="atn" matchPattern="(.+)"
+          replacementPattern="https://github.com/DiSA-DHIL/ATN-Schema/sch/ATN.odd#atn_$1"/>
+        <prefixDef ident="rnd" matchPattern="(.+)"
+          replacementPattern="https://github.com/DiSA-DHIL/ATN-Schema/sch/ATN.odd#rnd_$1"/>
+        <prefixDef ident="org" matchPattern="(.+)" replacementPattern="organizations.xml#$1"/>
+        <prefixDef ident="bibl" matchPattern="(.+)" replacementPattern="bibliography.xml#$1"/>
+        <prefixDef ident="pers" matchPattern="(.+)" replacementPattern="people.xml#$1"/>
+        <prefixDef ident="plc" matchPattern="(.+)" replacementPattern="places.xml#$1"/>
+        <prefixDef ident="doc" matchPattern="[^#]+(#.+)?" replacementPattern="$1$2"/>
+      </listPrefixDef>
       <classDecl>
         <taxonomy xml:id="ATN_DocType" n="atn">
           <category xml:id="atn_BornDigital">
@@ -186,6 +198,34 @@
         <moduleRef key="gaiji"/>
         <moduleRef key="linking" include="standOff"/>
         <moduleRef key="namesdates"/>
+        <elementSpec ident="persName" mode="change">
+          <attList>
+            <attDef ident="ref" mode="change">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef key="atndata.personPointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="orgName" mode="change">
+          <attList>
+            <attDef ident="ref" mode="change">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef key="atndata.orgPointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        <elementSpec ident="placeName" mode="change">
+          <attList>
+            <attDef ident="ref" mode="change">
+              <datatype minOccurs="1" maxOccurs="unbounded">
+                <dataRef key="atndata.placePointer"/>
+              </datatype>
+            </attDef>
+          </attList>
+        </elementSpec>
+        
         <moduleRef key="tei"/>
         <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7"/>
         <moduleRef key="transcr"/>
@@ -226,6 +266,46 @@
             </attDef>
           </attList>
         </classSpec>
+        <dataSpec ident="atndata.personPointer" mode="add">
+          <content>
+            <alternate>
+              <dataRef name="anyURI" restriction="https?://.+"/>
+              <dataRef name="anyURI" restriction="pers:\S+"/>
+            </alternate>
+          </content>
+        </dataSpec>
+        <dataSpec ident="atndata.orgPointer" mode="add">
+          <content>
+            <alternate>
+              <dataRef name="anyURI" restriction="https?://.+"/>
+              <dataRef name="anyURI" restriction="org:\S+"/>
+            </alternate>
+          </content>
+        </dataSpec>
+        <dataSpec ident="atndata.biblPointer" mode="add">
+          <content>
+            <alternate>
+              <dataRef name="anyURI" restriction="https?://.+"/>
+              <dataRef name="anyURI" restriction="bibl:\S+"/>
+            </alternate>
+          </content>
+        </dataSpec>
+        <dataSpec ident="atndata.placePointer" mode="add">
+          <content>
+            <alternate>
+              <dataRef name="anyURI" restriction="https?://.+"/>
+              <dataRef name="anyURI" restriction="plc:\S+"/>
+            </alternate>
+          </content>
+        </dataSpec>
+        <dataSpec ident="atndata.docPointer" mode="add">
+          <content>
+            <alternate>
+              <dataRef name="anyURI" restriction="https?://.+"/>
+              <dataRef name="anyURI" restriction="doc:\S+"/>
+            </alternate>
+          </content>
+        </dataSpec>
         <dataSpec ident="teidata.language" mode="change">
           <content>
             <alternate>

@@ -14,10 +14,17 @@
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
+     <profileDesc>
+        <textClass>
+            <catRef scheme="atn:DocType" target="atn:BornDigital"/>
+        </textClass>
+     </profileDesc>
   </teiHeader>
   <text>
       <body>
-         <p></p>
+         <p>
+            <persName ref="pers:something"/>
+         </p>
       </body>
   </text>
 </TEI>
